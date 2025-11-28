@@ -1,0 +1,95 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aa7ff820-bdbc-11f0-a17e-7b3fe780dab2"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "cecded50-c0ae-11f0-93ad-355a87ef80c4"
+    },
+    "label" : "Lisbon Test Sensor",
+    "name" : "Atom_NTU_LoraWAN_Lisbon2",
+    "softwareId" : null,
+    "type" : "FertiRega LoRa Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "2LmpoF2MWB0lY9rAxUHr",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cecded50-c0ae-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 83
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1763058650501,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1763052371643,
+      "longValue" : 1763052371643,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1764344282875,
+      "longValue" : 1764344280267,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1763842150435,
+      "longValue" : 1763842150434,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1763144200096,
+      "longValue" : 1763144200096,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

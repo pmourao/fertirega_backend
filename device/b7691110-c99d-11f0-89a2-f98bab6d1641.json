@@ -1,0 +1,97 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "lastConnectedGateway" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aa7ff820-bdbc-11f0-a17e-7b3fe780dab2"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "b7691110-c99d-11f0-89a2-f98bab6d1641"
+    },
+    "label" : null,
+    "name" : "Sintra-Garden",
+    "softwareId" : null,
+    "type" : "FertiRega LoRa Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "uw2bOoyS4SPksW48CeH6",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b7691110-c99d-11f0-89a2-f98bab6d1641"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 90
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1764035214472,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1764035214472,
+      "longValue" : 1764035214472,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1764034601870,
+      "longValue" : 1764034598853,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1764033967289,
+      "longValue" : 1764033967289,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1764034598864,
+      "longValue" : 1764034598864,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

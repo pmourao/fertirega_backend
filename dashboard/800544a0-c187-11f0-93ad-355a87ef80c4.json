@@ -1,0 +1,138 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "LoRa infrastructure monitoring - gateway status, message rates, signal quality",
+      "widgets" : {
+        "73e0e56f-3cb4-429f-8f9e-5a63e0348a9d" : {
+          "type" : "latest",
+          "sizeX" : 4,
+          "sizeY" : 4,
+          "row" : 0,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "57fc2577-e47a-4dd4-a27c-45fa54b07820",
+              "dataKeys" : [ {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "Status"
+              } ]
+            } ],
+            "title" : "Gateway Status",
+            "settings" : {
+              "labelPosition" : "top"
+            }
+          },
+          "typeFullFqn" : "system.cards.simple_card"
+        },
+        "db555933-6a0b-41bd-a1d7-125f2c0e25d1" : {
+          "type" : "latest",
+          "sizeX" : 4,
+          "sizeY" : 4,
+          "row" : 0,
+          "col" : 4,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "entityAliasId" : "7b33dbf5-2a46-4ab3-8d8e-5b3dd804493a"
+            } ],
+            "title" : "Active Devices",
+            "settings" : {
+              "labelPosition" : "top"
+            }
+          },
+          "typeFullFqn" : "system.cards.entities_count_card"
+        },
+        "032f1fb8-3a31-4c42-9678-3bc2c286f7c6" : {
+          "type" : "latest",
+          "sizeX" : 12,
+          "sizeY" : 8,
+          "row" : 4,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "7b33dbf5-2a46-4ab3-8d8e-5b3dd804493a",
+              "dataKeys" : [ {
+                "name" : "lastGatewayId",
+                "type" : "attribute",
+                "label" : "Gateway"
+              }, {
+                "name" : "lastRssi",
+                "type" : "attribute",
+                "label" : "RSSI (dBm)"
+              }, {
+                "name" : "lastSnr",
+                "type" : "attribute",
+                "label" : "SNR"
+              }, {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery (%)"
+              } ]
+            } ],
+            "title" : "Devices by Gateway",
+            "settings" : {
+              "enablePagination" : true,
+              "enableSearch" : true,
+              "displayEntityName" : true
+            }
+          },
+          "typeFullFqn" : "system.tables.entities_table"
+        }
+      },
+      "entityAliases" : {
+        "57fc2577-e47a-4dd4-a27c-45fa54b07820" : {
+          "id" : "57fc2577-e47a-4dd4-a27c-45fa54b07820",
+          "alias" : "Gateway",
+          "filter" : {
+            "type" : "singleEntity",
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+            }
+          }
+        },
+        "7b33dbf5-2a46-4ab3-8d8e-5b3dd804493a" : {
+          "id" : "7b33dbf5-2a46-4ab3-8d8e-5b3dd804493a",
+          "alias" : "FertiRega Devices",
+          "filter" : {
+            "type" : "deviceType",
+            "deviceType" : "FertiRega LoRa Sensor"
+          }
+        }
+      },
+      "timewindow" : {
+        "realtime" : {
+          "timewindowMs" : 3600000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : true,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "800544a0-c187-11f0-93ad-355a87ef80c4"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Gateway Monitoring",
+    "title" : "Gateway Monitoring"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

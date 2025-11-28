@@ -1,0 +1,179 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true,
+      "description" : "ThingsBoard IoT Gateway connecting ChirpStack MQTT broker to ThingsBoard"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "6f181da0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "label" : "ChirpStack LoRa Gateway",
+    "name" : "ChirpStack MQTT Gateway",
+    "softwareId" : null,
+    "type" : "Gateway"
+  },
+  "credentials" : {
+    "credentialsId" : "5RcemB4FHqATNqpsI6SH",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "89ec0210-c98e-11f0-89a2-f98bab6d1641"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 89
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "8b939d40-c0eb-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 84
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b7691110-c99d-11f0-89a2-f98bab6d1641"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 90
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "ce436090-c0ae-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 81
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cecded50-c0ae-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 83
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 88
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762731991089,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1762729682730,
+      "longValue" : 1762729682729,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1764344306857,
+      "longValue" : 1764344305455,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1763842150382,
+      "longValue" : 1763842150382,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1763144200096,
+      "longValue" : 1763144200096,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[{\"name\":\"MQTT Connector\",\"type\":\"mqtt\",\"configuration\":\"mqtt.json\"}]",
+      "key" : "connectors_configuration",
+      "lastUpdateTs" : 1762732324335,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"name\":\"MQTT Connector\",\"type\":\"mqtt\",\"configuration\":{\"broker\":{\"name\":\"ChirpStack MQTT Broker\",\"host\":\"192.168.52.108\",\"port\":1883,\"version\":5,\"clientId\":\"tb-gateway-chirpstack\",\"maxMessageNumberPerWorker\":10,\"maxNumberOfWorkers\":100,\"sendDataOnlyOnChange\":false,\"security\":{\"type\":\"anonymous\"}},\"mapping\":[{\"topicFilter\":\"application/+/device/+/event/up\",\"subscriptionQos\":0,\"converter\":{\"type\":\"json\",\"deviceNameExpression\":\"${deviceInfo.devEui}\",\"deviceProfileExpression\":\"FertiRega LoRa Sensor\",\"timeout\":60000,\"attributes\":[],\"timeseries\":[{\"key\":\"temperature\",\"type\":\"double\",\"value\":\"${object.temperature}\"},{\"key\":\"humidity\",\"type\":\"double\",\"value\":\"${object.humidity}\"},{\"key\":\"battery_percentage\",\"type\":\"double\",\"value\":\"${object.battery_percentage}\"}]}}],\"connectRequests\":[],\"disconnectRequests\":[],\"attributeRequests\":[],\"attributeUpdates\":[],\"serverSideRpc\":[]}}",
+      "key" : "mqtt",
+      "lastUpdateTs" : 1762732940333,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

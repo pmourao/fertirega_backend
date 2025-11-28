@@ -1,0 +1,97 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "lastConnectedGateway" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aa7ff820-bdbc-11f0-a17e-7b3fe780dab2"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+    },
+    "label" : null,
+    "name" : "Atom_NTU_LoraWAN_Tomar",
+    "softwareId" : null,
+    "type" : "FertiRega LoRa Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "Gfc3nM1Ngv9uduHJ07LW",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f1892d0-bdbf-11f0-a17e-7b3fe780dab2"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 88
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1764341972756,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1764293814818,
+      "longValue" : 1764293814818,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1764344306857,
+      "longValue" : 1764344304603,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1764341972756,
+      "longValue" : 1764341972756,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1764293168863,
+      "longValue" : 1764293168863,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

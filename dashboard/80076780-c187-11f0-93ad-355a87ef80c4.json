@@ -1,0 +1,168 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "Device-level diagnostics and signal quality monitoring",
+      "widgets" : {
+        "34460c81-66eb-4cf0-8484-82bb36c09677" : {
+          "type" : "latest",
+          "sizeX" : 8,
+          "sizeY" : 2,
+          "row" : 0,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "1a18dfd4-16f4-42dd-b92c-497e43e66532"
+            } ],
+            "title" : "Select Device",
+            "settings" : { }
+          },
+          "typeFullFqn" : "system.input_widgets.entities_select"
+        },
+        "be4c8ba0-f336-4448-84c6-7737805a8ad6" : {
+          "type" : "latest",
+          "sizeX" : 4,
+          "sizeY" : 4,
+          "row" : 0,
+          "col" : 8,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "c865fa82-4590-49ad-aee0-15d72ee27fb8",
+              "dataKeys" : [ {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery"
+              } ]
+            } ],
+            "title" : "Battery Status",
+            "settings" : {
+              "minValue" : 0,
+              "maxValue" : 100
+            }
+          },
+          "typeFullFqn" : "system.cards.battery_level"
+        },
+        "d472024c-05a5-47d2-a9f5-bdfcaf16dbea" : {
+          "type" : "timeseries",
+          "sizeX" : 12,
+          "sizeY" : 6,
+          "row" : 4,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "c865fa82-4590-49ad-aee0-15d72ee27fb8",
+              "dataKeys" : [ {
+                "name" : "lastRssi",
+                "type" : "attribute",
+                "label" : "RSSI (dBm)"
+              }, {
+                "name" : "lastSnr",
+                "type" : "attribute",
+                "label" : "SNR"
+              } ]
+            } ],
+            "title" : "Signal Quality History",
+            "timewindow" : {
+              "history" : {
+                "timewindowMs" : 604800000
+              }
+            },
+            "settings" : {
+              "showLegend" : true
+            }
+          },
+          "typeFullFqn" : "system.charts.timeseries_line_chart"
+        },
+        "8d39d5d1-4ee8-4d2d-af62-f2eeef3f437f" : {
+          "type" : "timeseries",
+          "sizeX" : 12,
+          "sizeY" : 8,
+          "row" : 10,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "c865fa82-4590-49ad-aee0-15d72ee27fb8",
+              "dataKeys" : [ {
+                "name" : "temperature",
+                "type" : "timeseries"
+              }, {
+                "name" : "humidity",
+                "type" : "timeseries"
+              }, {
+                "name" : "battery_percentage",
+                "type" : "timeseries"
+              }, {
+                "name" : "valve_0_status",
+                "type" : "timeseries"
+              }, {
+                "name" : "valve_1_status",
+                "type" : "timeseries"
+              }, {
+                "name" : "pulse_counter_0",
+                "type" : "timeseries"
+              }, {
+                "name" : "pulse_counter_1",
+                "type" : "timeseries"
+              } ]
+            } ],
+            "title" : "Raw Telemetry",
+            "timewindow" : {
+              "history" : {
+                "timewindowMs" : 86400000
+              }
+            },
+            "settings" : {
+              "enablePagination" : true
+            }
+          },
+          "typeFullFqn" : "system.tables.timeseries_table"
+        }
+      },
+      "entityAliases" : {
+        "1a18dfd4-16f4-42dd-b92c-497e43e66532" : {
+          "id" : "1a18dfd4-16f4-42dd-b92c-497e43e66532",
+          "alias" : "All FertiRega Devices",
+          "filter" : {
+            "type" : "deviceType",
+            "deviceType" : "FertiRega LoRa Sensor"
+          }
+        },
+        "c865fa82-4590-49ad-aee0-15d72ee27fb8" : {
+          "id" : "c865fa82-4590-49ad-aee0-15d72ee27fb8",
+          "alias" : "Selected Device",
+          "filter" : {
+            "type" : "stateEntity"
+          }
+        }
+      },
+      "timewindow" : {
+        "realtime" : {
+          "timewindowMs" : 3600000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : true
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "80076780-c187-11f0-93ad-355a87ef80c4"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Device Technical Diagnostics",
+    "title" : "Device Technical Diagnostics"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

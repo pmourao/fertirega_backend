@@ -1,0 +1,236 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "FertiRega device monitoring with GPS map and telemetry",
+      "entityAliases" : {
+        "854eee04-d6ae-4e08-aa80-2512c270ffd5" : {
+          "id" : "854eee04-d6ae-4e08-aa80-2512c270ffd5",
+          "alias" : "All FertiRega Devices",
+          "filter" : {
+            "type" : "deviceType",
+            "resolveMultiple" : true,
+            "deviceTypes" : [ "FertiRega LoRa Sensor" ]
+          }
+        },
+        "32c491c0-2a3b-4a38-93e4-19842a20ff6b" : {
+          "id" : "32c491c0-2a3b-4a38-93e4-19842a20ff6b",
+          "alias" : "Selected Device",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false
+          }
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Device Map",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "9de8d7d7-d78d-4595-bea8-4232b945668f" : {
+                  "sizeX" : 24,
+                  "sizeY" : 16,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "autoFillHeight" : true
+              }
+            }
+          }
+        },
+        "deviceDetails" : {
+          "name" : "${entityName} Details",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "9de8d7d7-d78d-4595-bea8-4232b945668f" : {
+                  "sizeX" : 16,
+                  "sizeY" : 12,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "24dc7f08-c4a0-4d2e-886d-3b34be26e091" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 0,
+                  "col" : 16
+                },
+                "82105b3b-65a2-4374-965e-f449e91e82f4" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 6,
+                  "col" : 16
+                },
+                "3dd341b6-f1c9-4758-87da-8de8f3b6e757" : {
+                  "sizeX" : 24,
+                  "sizeY" : 4,
+                  "row" : 12,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "autoFillHeight" : true
+              }
+            }
+          }
+        }
+      },
+      "widgets" : {
+        "9de8d7d7-d78d-4595-bea8-4232b945668f" : {
+          "isSystemType" : true,
+          "bundleAlias" : "maps",
+          "typeAlias" : "google_maps",
+          "type" : "latest",
+          "sizeX" : 24,
+          "sizeY" : 16,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "854eee04-d6ae-4e08-aa80-2512c270ffd5",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude",
+                "color" : "#2196f3"
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude",
+                "color" : "#4caf50"
+              }, {
+                "name" : "temperature",
+                "type" : "timeseries",
+                "label" : "Temperature",
+                "color" : "#f44336",
+                "decimals" : 1
+              }, {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery",
+                "color" : "#ffc107",
+                "decimals" : 0
+              } ]
+            } ],
+            "settings" : {
+              "latKeyName" : "latitude",
+              "lngKeyName" : "longitude",
+              "fitMapBounds" : true,
+              "showLabel" : true,
+              "label" : "${entityName}",
+              "showTooltip" : true,
+              "tooltipPattern" : "<b>${entityName}</b><br/>Temp: ${temperature:1}°C<br/>Battery: ${battery_percentage:0}%",
+              "defaultZoomLevel" : 12,
+              "showTooltipAction" : "click"
+            },
+            "title" : "Device Locations",
+            "showTitle" : true,
+            "actions" : {
+              "tooltipAction" : [ {
+                "name" : "navigate_to_details",
+                "icon" : "more_horiz",
+                "type" : "custom",
+                "customFunction" : "var $state = widgetContext.stateController.getStateId(); if ($state !== 'deviceDetails') { widgetContext.stateController.openState('deviceDetails', {entityId: entityId, entityName: entityName}); }"
+              } ]
+            }
+          }
+        },
+        "24dc7f08-c4a0-4d2e-886d-3b34be26e091" : {
+          "typeFullFqn" : "system.cards.timeseries_simple_card",
+          "type" : "timeseries",
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "32c491c0-2a3b-4a38-93e4-19842a20ff6b",
+              "dataKeys" : [ {
+                "name" : "temperature",
+                "type" : "timeseries",
+                "label" : "Temperature",
+                "color" : "#f44336"
+              } ]
+            } ],
+            "title" : "Temperature",
+            "showTitle" : true
+          }
+        },
+        "82105b3b-65a2-4374-965e-f449e91e82f4" : {
+          "typeFullFqn" : "system.cards.timeseries_simple_card",
+          "type" : "timeseries",
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "32c491c0-2a3b-4a38-93e4-19842a20ff6b",
+              "dataKeys" : [ {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery",
+                "color" : "#4caf50"
+              } ]
+            } ],
+            "title" : "Battery Level",
+            "showTitle" : true
+          }
+        },
+        "3dd341b6-f1c9-4758-87da-8de8f3b6e757" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 24,
+          "sizeY" : 4,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "32c491c0-2a3b-4a38-93e4-19842a20ff6b",
+              "dataKeys" : [ {
+                "name" : "valve1",
+                "type" : "timeseries",
+                "label" : "Valve 1"
+              }, {
+                "name" : "valve2",
+                "type" : "timeseries",
+                "label" : "Valve 2"
+              } ]
+            } ],
+            "title" : "Valve Status",
+            "showTitle" : true
+          }
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : true,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "9b0490e0-c208-11f0-93ad-355a87ef80c4"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "FertiRega-GoogleMaps-2025-11-15",
+    "title" : "FertiRega-GoogleMaps-2025-11-15"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
