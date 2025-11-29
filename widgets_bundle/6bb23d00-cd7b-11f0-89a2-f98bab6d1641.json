@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "collibellex",
+    "description" : "Collibellex Widget Library",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "6bb23d00-cd7b-11f0-89a2-f98bab6d1641"
+    },
+    "image" : null,
+    "name" : "Collibellex",
+    "order" : null,
+    "scada" : false,
+    "title" : "Collibellex"
+  },
+  "fqns" : [ ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
