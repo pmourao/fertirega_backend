@@ -825,50 +825,6 @@
           "col" : 0,
           "id" : "1812c5ff-ef28-a4bc-988d-f118f38b8f56"
         },
-        "bab68abd-1e55-dd88-ff93-ed5befac6044" : {
-          "typeFullFqn" : "system.control_widgets.update_attributes",
-          "type" : "rpc",
-          "sizeX" : 4,
-          "sizeY" : 2,
-          "config" : {
-            "showTitle" : false,
-            "backgroundColor" : "#e6e7e8",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "title" : "",
-              "buttonText" : "Update device attribute",
-              "entityAttributeType" : "SHARED_SCOPE",
-              "entityParameters" : "{\n    \n     \"schedule_1\": \n     {\n        \"start_time\":\"2025-08-25T16-08-25T14:00:00Z\",\n        \"end_time\":\"2025-08-25T16:00:00Z\",\n        \"repeat_type\":\"00000000\"\n         \n     }\n}",
-              "styleButton" : {
-                "isRaised" : true,
-                "isPrimary" : false,
-                "bgColor" : null,
-                "textColor" : null
-              }
-            },
-            "title" : "Update device attribute",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "targetDeviceAliases" : [ ],
-            "datasources" : [ ],
-            "targetDevice" : {
-              "type" : "entity",
-              "entityAliasId" : "b642a5fd-7d5d-8a8f-eb84-03255e2190a6"
-            }
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "bab68abd-1e55-dd88-ff93-ed5befac6044"
-        },
         "24cfdb6b-8abb-2215-0861-8ff49a45bad6" : {
           "typeFullFqn" : "tenant.fertirega_deviceattributes",
           "type" : "latest",
@@ -3837,49 +3793,6 @@
           "col" : 0,
           "id" : "b3294e05-3737-8023-75d5-b9a5864e2f85"
         },
-        "69cc3296-b560-7d10-d5d5-e957c7aad27e" : {
-          "typeFullFqn" : "system.control_widgets.rpcbutton",
-          "type" : "rpc",
-          "sizeX" : 4,
-          "sizeY" : 2,
-          "config" : {
-            "targetDeviceAliases" : [ ],
-            "showTitle" : false,
-            "backgroundColor" : "#e6e7e8",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "requestTimeout" : 5000,
-              "oneWayElseTwoWay" : true,
-              "buttonText" : "Send RPC",
-              "styleButton" : {
-                "isRaised" : true,
-                "isPrimary" : false
-              },
-              "methodName" : "rpcCommand",
-              "methodParams" : "{}"
-            },
-            "title" : "RPC Button",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "datasources" : [ ],
-            "targetDevice" : {
-              "type" : "device",
-              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4"
-            }
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "69cc3296-b560-7d10-d5d5-e957c7aad27e"
-        },
         "bb924b84-5c71-6c5c-2846-47211f14a065" : {
           "typeFullFqn" : "system.control_widgets.rpcbutton",
           "type" : "rpc",
@@ -3912,7 +3825,20 @@
             },
             "useDashboardTimewindow" : true,
             "showLegend" : false,
-            "actions" : { },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "jhj",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : null,
+                "openRightLayout" : false,
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "id" : "96af71ba-128c-7857-e2f5-fd01690389ce"
+              } ]
+            },
             "datasources" : [ ],
             "targetDevice" : {
               "type" : "device",
@@ -3986,6 +3912,47 @@
           "row" : 0,
           "col" : 0,
           "id" : "7ea0c05a-537c-75ae-0936-863fced216b1"
+        },
+        "cbe67419-3b2f-e84b-b791-eab5c3514d77" : {
+          "typeFullFqn" : "system.control_widgets.switch_control",
+          "type" : "rpc",
+          "sizeX" : 4,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "initialValue" : false,
+              "getValueMethod" : "getValue",
+              "setValueMethod" : "setValue",
+              "showOnOffLabels" : true,
+              "title" : "Switch control"
+            },
+            "title" : "Switch Control",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDevice" : {
+              "type" : "device",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "cbe67419-3b2f-e84b-b791-eab5c3514d77"
         }
       },
       "states" : {
@@ -4097,14 +4064,8 @@
                 "1812c5ff-ef28-a4bc-988d-f118f38b8f56" : {
                   "sizeX" : 7,
                   "sizeY" : 4,
-                  "row" : 32,
-                  "col" : 11
-                },
-                "bab68abd-1e55-dd88-ff93-ed5befac6044" : {
-                  "sizeX" : 4,
-                  "sizeY" : 2,
-                  "row" : 32,
-                  "col" : 18
+                  "row" : 9,
+                  "col" : 0
                 },
                 "24cfdb6b-8abb-2215-0861-8ff49a45bad6" : {
                   "sizeX" : 12,
@@ -4136,22 +4097,22 @@
                   "row" : 7,
                   "col" : 0
                 },
-                "69cc3296-b560-7d10-d5d5-e957c7aad27e" : {
-                  "sizeX" : 4,
-                  "sizeY" : 2,
-                  "row" : 36,
-                  "col" : 0
-                },
                 "bb924b84-5c71-6c5c-2846-47211f14a065" : {
                   "sizeX" : 4,
                   "sizeY" : 2,
-                  "row" : 38,
-                  "col" : 0
+                  "row" : 10,
+                  "col" : 7
                 },
                 "7ea0c05a-537c-75ae-0936-863fced216b1" : {
                   "sizeX" : 9,
                   "sizeY" : 5,
-                  "row" : 40,
+                  "row" : 10,
+                  "col" : 12
+                },
+                "cbe67419-3b2f-e84b-b791-eab5c3514d77" : {
+                  "sizeX" : 4,
+                  "sizeY" : 2,
+                  "row" : 15,
                   "col" : 0
                 }
               },
