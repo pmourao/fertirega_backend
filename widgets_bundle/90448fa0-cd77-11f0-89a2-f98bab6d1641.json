@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "fertirega_bundle",
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "90448fa0-cd77-11f0-89a2-f98bab6d1641"
+    },
+    "image" : null,
+    "name" : "Fertirega_bundle",
+    "order" : null,
+    "scada" : false,
+    "title" : "Fertirega_bundle"
+  },
+  "fqns" : [ ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
