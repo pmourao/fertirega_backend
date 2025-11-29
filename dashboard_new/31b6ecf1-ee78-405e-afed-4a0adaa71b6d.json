@@ -1,0 +1,264 @@
+{
+  "entityType": "DASHBOARD",
+  "entity": {
+    "assignedCustomers": null,
+    "configuration": {
+      "description": "FertiRega irrigation system overview with device map",
+      "widgets": {
+        "15557dbf-62b3-466e-8f5f-e92d25f83033": {
+          "typeFullFqn": "system.maps_v2.google_maps",
+          "type": "latest",
+          "sizeX": 16,
+          "sizeY": 12,
+          "row": 0,
+          "col": 0,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "name": "",
+                "entityAliasId": "fertirega_devices",
+                "dataKeys": [
+                  {
+                    "name": "Server_Lat",
+                    "type": "attribute",
+                    "label": "Latitude"
+                  },
+                  {
+                    "name": "Server_Lon",
+                    "type": "attribute",
+                    "label": "Longitude"
+                  },
+                  {
+                    "name": "temperature",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "humidity",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "battery_percentage",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "valve_0_status",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "valve_1_status",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "active",
+                    "type": "attribute"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "provider": "google-map",
+              "mapProvider": "google-map",
+              "latKeyName": "Server_Lat",
+              "lngKeyName": "Server_Lon",
+              "showLabel": true,
+              "useLabelFunction": true,
+              "labelFunction": "var color;\nif (dsData[dsIndex].active !== 'true') {\n    color = 'rgb(255, 0, 0)';\n} else {\n    color = 'rgb(39, 134, 34)';\n}\n\nvar temperature = parseFloat(data['temperature']).toFixed(1);\nvar humidity = parseFloat(data['humidity']).toFixed(1);\nvar battery = parseFloat(data['battery_percentage']).toFixed(1);\nvar valve0 = data['valve_0_status'] === 1 ? 'Open' : 'Closed';\nvar valve1 = data['valve_1_status'] === 1 ? 'Open' : 'Closed';\n\nreturn '<div style=\"border: solid ' + color + '; border-radius: 10px; color: ' + color + '; background-color: #fff; padding: 5px; font-size: 12px;\">' +\n    '<b>' + entityName + '</b><br>' +\n    'Temp: ' + temperature + '\u00b0C<br>' +\n    'Humidity: ' + humidity + '%<br>' +\n    'Battery: ' + battery + '%<br>' +\n    'V0: ' + valve0 + ' | V1: ' + valve1 +\n    '</div>';",
+              "showTooltip": true,
+              "useTooltipFunction": true,
+              "tooltipPattern": "<b>${entityName}</b><br/><br/>Click to view device details",
+              "markerClusteringEnabled": false,
+              "defaultCenterPosition": [
+                38.7223,
+                -9.1393
+              ],
+              "defaultZoomLevel": 8,
+              "useDefaultCenterPosition": true,
+              "showCoverageOnHover": false,
+              "markerClick": {
+                "name": "custom",
+                "icon": "mdi:map-marker",
+                "actionsData": {
+                  "custom": {
+                    "actionSourceId": "15557dbf-62b3-466e-8f5f-e92d25f83033",
+                    "actionTargetStateId": null
+                  }
+                }
+              }
+            },
+            "actions": {
+              "markerClick": [
+                {
+                  "id": "bc459690-5ab9-4c03-a50a-7a2c564de208",
+                  "name": "Navigate to device details",
+                  "icon": "arrow_forward",
+                  "type": "Navigate to new dashboard state",
+                  "targetDashboardStateId": "deviceDetails",
+                  "setEntityIdInState": true
+                }
+              ]
+            }
+          }
+        },
+        "4703ffd6-92f2-485e-9885-6575cf3b49b1": {
+          "typeFullFqn": "system.cards.entities_table",
+          "type": "latest",
+          "sizeX": 8,
+          "sizeY": 6,
+          "row": 0,
+          "col": 16,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "fertirega_devices",
+                "dataKeys": [
+                  {
+                    "name": "temperature",
+                    "type": "timeseries",
+                    "label": "Temp (\u00b0C)"
+                  },
+                  {
+                    "name": "humidity",
+                    "type": "timeseries",
+                    "label": "Humidity (%)"
+                  },
+                  {
+                    "name": "battery_percentage",
+                    "type": "timeseries",
+                    "label": "Battery (%)"
+                  },
+                  {
+                    "name": "active",
+                    "type": "attribute",
+                    "label": "Status"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Active Devices",
+              "displayPagination": true,
+              "defaultPageSize": 10,
+              "enableFilter": true,
+              "enableStickyAction": true
+            },
+            "actions": {
+              "rowClick": [
+                {
+                  "id": "5a921f64-4f0e-439f-ad75-d8933d9b8d27",
+                  "name": "View device details",
+                  "icon": "arrow_forward",
+                  "type": "Navigate to new dashboard state",
+                  "targetDashboardStateId": "deviceDetails",
+                  "setEntityIdInState": true
+                }
+              ]
+            }
+          }
+        },
+        "630fd6f2-c745-4bc4-99c9-9a8d1b873b45": {
+          "typeFullFqn": "system.alarm_widgets.alarms_table",
+          "type": "alarm",
+          "sizeX": 8,
+          "sizeY": 6,
+          "row": 6,
+          "col": 16,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "fertirega_devices",
+                "dataKeys": []
+              }
+            ],
+            "alarmFilterConfig": {
+              "statusList": [
+                "ACTIVE_UNACK",
+                "ACTIVE_ACK"
+              ]
+            },
+            "settings": {
+              "showTitle": true,
+              "title": "Active Alarms",
+              "displayPagination": true,
+              "enableStickyAction": true
+            }
+          }
+        }
+      },
+      "states": {
+        "default": {
+          "name": "Device Overview",
+          "root": true,
+          "layouts": {
+            "main": {
+              "widgets": {
+                "15557dbf-62b3-466e-8f5f-e92d25f83033": {
+                  "sizeX": 16,
+                  "sizeY": 12,
+                  "row": 0,
+                  "col": 0
+                },
+                "4703ffd6-92f2-485e-9885-6575cf3b49b1": {
+                  "sizeX": 8,
+                  "sizeY": 6,
+                  "row": 0,
+                  "col": 16
+                },
+                "630fd6f2-c745-4bc4-99c9-9a8d1b873b45": {
+                  "sizeX": 8,
+                  "sizeY": 6,
+                  "row": 6,
+                  "col": 16
+                }
+              },
+              "gridSettings": {
+                "backgroundColor": "#eeeeee",
+                "columns": 24,
+                "margin": 10,
+                "backgroundSizeMode": "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases": {
+        "fertirega_devices": {
+          "id": "3f0c81fc-af24-4776-afa2-1cafb33356ab",
+          "alias": "FertiRega Devices",
+          "filter": {
+            "type": "deviceType",
+            "resolveMultiple": true,
+            "deviceTypes": [
+              "FertiRega LoRa Sensor"
+            ]
+          }
+        }
+      },
+      "filters": {},
+      "timewindow": {
+        "displayValue": "",
+        "selectedTab": 0,
+        "realtime": {
+          "realtimeType": 1,
+          "interval": 1000,
+          "timewindowMs": 60000,
+          "quickInterval": "CURRENT_DAY"
+        }
+      },
+      "settings": {
+        "stateControllerId": "entity",
+        "showTitle": true,
+        "showDashboardsSelect": true,
+        "showEntitiesSelect": true,
+        "showDashboardTimewindow": true,
+        "showDashboardExport": true,
+        "toolbarAlwaysOpen": true
+      }
+    },
+    "name": "FertiRega Overview",
+    "title": "FertiRega Irrigation Management - Overview"
+  }
+}

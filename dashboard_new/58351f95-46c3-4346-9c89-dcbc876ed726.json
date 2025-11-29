@@ -1,0 +1,437 @@
+{
+  "entityType": "DASHBOARD",
+  "entity": {
+    "assignedCustomers": null,
+    "configuration": {
+      "description": "FertiRega device details with valve control and monitoring",
+      "widgets": {
+        "74041640-1fab-4722-a5f2-a7516e6b4795": {
+          "typeFullFqn": "tenant.fertirega_deviceattributes",
+          "type": "latest",
+          "sizeX": 12,
+          "sizeY": 4,
+          "row": 0,
+          "col": 0,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "Server_Lat",
+                    "type": "attribute"
+                  },
+                  {
+                    "name": "Server_Lon",
+                    "type": "attribute"
+                  },
+                  {
+                    "name": "battery_percentage",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "temperature",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "humidity",
+                    "type": "timeseries"
+                  },
+                  {
+                    "name": "active",
+                    "type": "attribute"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Device Information"
+            }
+          }
+        },
+        "4ba89f3f-c0c9-489b-9a97-1f732f3a33fd": {
+          "typeFullFqn": "system.battery_level",
+          "type": "latest",
+          "sizeX": 6,
+          "sizeY": 4,
+          "row": 0,
+          "col": 12,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "battery_percentage",
+                    "type": "timeseries"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Battery Level",
+              "layout": "vertical_solid",
+              "sectionsCount": 4,
+              "showValue": true,
+              "valueColor": {
+                "type": "range"
+              }
+            }
+          }
+        },
+        "0f852a7a-e8be-4ea2-857d-c15b06b61f2d": {
+          "typeFullFqn": "system.control_widgets.update_attributes",
+          "type": "rpc",
+          "sizeX": 6,
+          "sizeY": 2,
+          "row": 0,
+          "col": 18,
+          "config": {
+            "datasources": [],
+            "settings": {
+              "showTitle": true,
+              "title": "Navigation",
+              "buttonLabel": "\u2190 Back to Overview"
+            },
+            "actions": {
+              "buttonClick": [
+                {
+                  "id": "f8e9bf2a-1465-47ce-9e6c-fa9361a829fe",
+                  "name": "Back to overview",
+                  "icon": "arrow_back",
+                  "type": "Navigate to other dashboard",
+                  "targetDashboardId": "31b6ecf1-ee78-405e-afed-4a0adaa71b6d"
+                }
+              ]
+            }
+          }
+        },
+        "004b155f-436c-4ee9-8ccf-43eec15bbdfa": {
+          "typeFullFqn": "tenant.fertirega_valvecontrol_0",
+          "type": "rpc",
+          "sizeX": 6,
+          "sizeY": 4,
+          "row": 4,
+          "col": 0,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "valve_0_status",
+                    "type": "timeseries"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Valve 0 Control"
+            }
+          }
+        },
+        "5aa2337b-402a-4378-be36-4cc14c065889": {
+          "typeFullFqn": "tenant.fertirega_valvecontrol_1",
+          "type": "rpc",
+          "sizeX": 6,
+          "sizeY": 4,
+          "row": 4,
+          "col": 6,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "valve_1_status",
+                    "type": "timeseries"
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Valve 1 Control"
+            }
+          }
+        },
+        "287fa184-4088-4544-b355-edaafd4e09fb": {
+          "typeFullFqn": "tenant.fertirega_timepicker",
+          "type": "static",
+          "sizeX": 12,
+          "sizeY": 4,
+          "row": 4,
+          "col": 12,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": []
+              }
+            ],
+            "settings": {
+              "showTitle": true,
+              "title": "Schedule Valve Operation"
+            }
+          }
+        },
+        "902bd6c3-7833-4cdb-804a-cc762582bbee": {
+          "typeFullFqn": "system.time_series_chart",
+          "type": "timeseries",
+          "sizeX": 12,
+          "sizeY": 6,
+          "row": 8,
+          "col": 0,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "temperature",
+                    "type": "timeseries",
+                    "label": "Temperature (\u00b0C)",
+                    "color": "#f44336"
+                  }
+                ]
+              }
+            ],
+            "timewindow": {
+              "realtime": {
+                "timewindowMs": 86400000
+              }
+            },
+            "settings": {
+              "showTitle": true,
+              "title": "Temperature History",
+              "showLegend": true,
+              "dataZoom": true
+            }
+          }
+        },
+        "504c6b10-d104-40e2-b05c-7f3123371663": {
+          "typeFullFqn": "system.time_series_chart",
+          "type": "timeseries",
+          "sizeX": 12,
+          "sizeY": 6,
+          "row": 8,
+          "col": 12,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "humidity",
+                    "type": "timeseries",
+                    "label": "Humidity (%)",
+                    "color": "#2196f3"
+                  }
+                ]
+              }
+            ],
+            "timewindow": {
+              "realtime": {
+                "timewindowMs": 86400000
+              }
+            },
+            "settings": {
+              "showTitle": true,
+              "title": "Humidity History",
+              "showLegend": true,
+              "dataZoom": true
+            }
+          }
+        },
+        "9b9e3bf4-d6f6-449a-a762-22b13f0f62f0": {
+          "typeFullFqn": "system.state_chart",
+          "type": "timeseries",
+          "sizeX": 12,
+          "sizeY": 4,
+          "row": 14,
+          "col": 0,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "valve_0_status",
+                    "type": "timeseries",
+                    "label": "Valve 0 Status"
+                  }
+                ]
+              }
+            ],
+            "timewindow": {
+              "realtime": {
+                "timewindowMs": 86400000
+              }
+            },
+            "settings": {
+              "showTitle": true,
+              "title": "Valve 0 Status History",
+              "showLegend": true
+            }
+          }
+        },
+        "5ba35ab5-096d-4220-8e05-b80d596c0333": {
+          "typeFullFqn": "system.state_chart",
+          "type": "timeseries",
+          "sizeX": 12,
+          "sizeY": 4,
+          "row": 14,
+          "col": 12,
+          "config": {
+            "datasources": [
+              {
+                "type": "entity",
+                "entityAliasId": "selected_device",
+                "dataKeys": [
+                  {
+                    "name": "valve_1_status",
+                    "type": "timeseries",
+                    "label": "Valve 1 Status"
+                  }
+                ]
+              }
+            ],
+            "timewindow": {
+              "realtime": {
+                "timewindowMs": 86400000
+              }
+            },
+            "settings": {
+              "showTitle": true,
+              "title": "Valve 1 Status History",
+              "showLegend": true
+            }
+          }
+        }
+      },
+      "states": {
+        "default": {
+          "name": "Device Details",
+          "root": true,
+          "layouts": {
+            "main": {
+              "widgets": {
+                "74041640-1fab-4722-a5f2-a7516e6b4795": {
+                  "sizeX": 12,
+                  "sizeY": 4,
+                  "row": 0,
+                  "col": 0
+                },
+                "4ba89f3f-c0c9-489b-9a97-1f732f3a33fd": {
+                  "sizeX": 6,
+                  "sizeY": 4,
+                  "row": 0,
+                  "col": 12
+                },
+                "0f852a7a-e8be-4ea2-857d-c15b06b61f2d": {
+                  "sizeX": 6,
+                  "sizeY": 2,
+                  "row": 0,
+                  "col": 18
+                },
+                "004b155f-436c-4ee9-8ccf-43eec15bbdfa": {
+                  "sizeX": 6,
+                  "sizeY": 4,
+                  "row": 4,
+                  "col": 0
+                },
+                "5aa2337b-402a-4378-be36-4cc14c065889": {
+                  "sizeX": 6,
+                  "sizeY": 4,
+                  "row": 4,
+                  "col": 6
+                },
+                "287fa184-4088-4544-b355-edaafd4e09fb": {
+                  "sizeX": 12,
+                  "sizeY": 4,
+                  "row": 4,
+                  "col": 12
+                },
+                "902bd6c3-7833-4cdb-804a-cc762582bbee": {
+                  "sizeX": 12,
+                  "sizeY": 6,
+                  "row": 8,
+                  "col": 0
+                },
+                "504c6b10-d104-40e2-b05c-7f3123371663": {
+                  "sizeX": 12,
+                  "sizeY": 6,
+                  "row": 8,
+                  "col": 12
+                },
+                "9b9e3bf4-d6f6-449a-a762-22b13f0f62f0": {
+                  "sizeX": 12,
+                  "sizeY": 4,
+                  "row": 14,
+                  "col": 0
+                },
+                "5ba35ab5-096d-4220-8e05-b80d596c0333": {
+                  "sizeX": 12,
+                  "sizeY": 4,
+                  "row": 14,
+                  "col": 12
+                }
+              },
+              "gridSettings": {
+                "backgroundColor": "#eeeeee",
+                "columns": 24,
+                "margin": 10,
+                "backgroundSizeMode": "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases": {
+        "selected_device": {
+          "id": "919489d2-c8d0-4766-a1da-96f2bf788127",
+          "alias": "Selected Device",
+          "filter": {
+            "type": "stateEntity",
+            "resolveMultiple": false,
+            "stateEntityParamName": null,
+            "defaultStateEntity": null
+          }
+        }
+      },
+      "filters": {},
+      "timewindow": {
+        "displayValue": "",
+        "selectedTab": 0,
+        "realtime": {
+          "realtimeType": 1,
+          "interval": 1000,
+          "timewindowMs": 3600000,
+          "quickInterval": "CURRENT_HOUR"
+        }
+      },
+      "settings": {
+        "stateControllerId": "entity",
+        "showTitle": true,
+        "showDashboardsSelect": true,
+        "showEntitiesSelect": true,
+        "showDashboardTimewindow": true,
+        "showDashboardExport": true,
+        "toolbarAlwaysOpen": true
+      }
+    },
+    "name": "FertiRega Device Details",
+    "title": "FertiRega - Device Control & Monitoring"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "entityType": "RULE_CHAIN",
+  "entity": {
+    "additionalInfo": {
+      "description": "FertiRega alarm and logging rule chain"
+    },
+    "configuration": {
+      "nodes": [
+        {
+          "additionalInfo": {
+            "description": "Process telemetry and attribute updates",
+            "layoutX": 100,
+            "layoutY": 200
+          },
+          "configuration": {
+            "version": 0
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "ce5ce606-7b87-4184-abb2-67f9a24d80f5"
+          },
+          "name": "Message Type Switch",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Check if battery is below 20%",
+            "layoutX": 300,
+            "layoutY": 100
+          },
+          "configuration": {
+            "jsScript": "return msg.battery_percentage < 20;",
+            "tbelVersion": 0
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "87506024-1502-4b1d-8b87-ac0fd9fced8e"
+          },
+          "name": "Battery Low Check",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Create low battery alarm",
+            "layoutX": 500,
+            "layoutY": 100
+          },
+          "configuration": {
+            "alarmDetailsBuildJs": "var details = {};\nif (msg.battery_percentage !== undefined) {\n    details.batteryLevel = msg.battery_percentage;\n}\ndetails.ts = metadata.ts;\nreturn details;",
+            "alarmType": "Low Battery",
+            "propagate": true,
+            "relationTypes": [],
+            "severity": "WARNING",
+            "scriptLang": "JS"
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "e5b0b9c7-198b-4114-94c8-32e06b5d788b"
+          },
+          "name": "Create Low Battery Alarm",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Check device inactivity (> 3 hours)",
+            "layoutX": 300,
+            "layoutY": 200
+          },
+          "configuration": {
+            "jsScript": "var lastActivityTime = metadata.lastActivityTime || metadata.ts;\nvar currentTime = Date.now();\nvar threeHoursMs = 3 * 60 * 60 * 1000;\nreturn (currentTime - lastActivityTime) > threeHoursMs;",
+            "tbelVersion": 0
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "9c41d53d-956e-4f65-b409-1c2ea367ed75"
+          },
+          "name": "Inactivity Check",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Create device offline alarm",
+            "layoutX": 500,
+            "layoutY": 200
+          },
+          "configuration": {
+            "alarmDetailsBuildJs": "var details = {};\ndetails.lastActivityTime = metadata.lastActivityTime;\ndetails.currentTime = Date.now();\ndetails.inactivityHours = ((details.currentTime - details.lastActivityTime) / (60 * 60 * 1000)).toFixed(2);\nreturn details;",
+            "alarmType": "Device Offline",
+            "propagate": true,
+            "relationTypes": [],
+            "severity": "CRITICAL",
+            "scriptLang": "JS"
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "83295eb4-55ad-460c-8c07-45b198a1f40d"
+          },
+          "name": "Create Inactivity Alarm",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Log valve status changes",
+            "layoutX": 300,
+            "layoutY": 300
+          },
+          "configuration": {
+            "jsScript": "// Log valve status changes to telemetry\nvar newMsg = {};\nvar logEntries = [];\n\nif (msg.valve_0_status !== undefined) {\n    logEntries.push({\n        valve: 0,\n        status: msg.valve_0_status,\n        statusText: msg.valve_0_status === 1 ? 'Open' : 'Closed',\n        timestamp: metadata.ts || Date.now()\n    });\n}\n\nif (msg.valve_1_status !== undefined) {\n    logEntries.push({\n        valve: 1,\n        status: msg.valve_1_status,\n        statusText: msg.valve_1_status === 1 ? 'Open' : 'Closed',\n        timestamp: metadata.ts || Date.now()\n    });\n}\n\nif (logEntries.length > 0) {\n    newMsg.valve_status_log = JSON.stringify(logEntries);\n    return {msg: newMsg, metadata: metadata, msgType: msgType};\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+            "tbelVersion": 0
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "3f9198a6-fca7-4c09-9631-e1ebc94d66ac"
+          },
+          "name": "Valve Status Logger",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+        },
+        {
+          "additionalInfo": {
+            "description": "Save valve logs to timeseries",
+            "layoutX": 500,
+            "layoutY": 300
+          },
+          "configuration": {
+            "defaultTTL": 0
+          },
+          "createdTime": 0,
+          "debugMode": false,
+          "externalId": null,
+          "id": {
+            "entityType": "RULE_NODE",
+            "id": "cdb14a94-940c-4d12-bbe8-f92139d4a5a9"
+          },
+          "name": "Save Timeseries",
+          "ruleChainId": null,
+          "singletonMode": false,
+          "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+        }
+      ],
+      "connections": [
+        {
+          "fromIndex": 0,
+          "toIndex": 1,
+          "type": "Post telemetry"
+        },
+        {
+          "fromIndex": 1,
+          "toIndex": 2,
+          "type": "True"
+        },
+        {
+          "fromIndex": 0,
+          "toIndex": 3,
+          "type": "Post telemetry"
+        },
+        {
+          "fromIndex": 3,
+          "toIndex": 4,
+          "type": "True"
+        },
+        {
+          "fromIndex": 0,
+          "toIndex": 5,
+          "type": "Post telemetry"
+        },
+        {
+          "fromIndex": 5,
+          "toIndex": 6,
+          "type": "Success"
+        }
+      ],
+      "ruleChainConnections": null
+    },
+    "debugMode": false,
+    "firstRuleNodeId": {
+      "entityType": "RULE_NODE",
+      "id": "ce5ce606-7b87-4184-abb2-67f9a24d80f5"
+    },
+    "name": "FertiRega Alarms and Logging",
+    "root": false,
+    "type": "CORE"
+  },
+  "relations": [],
+  "attributes": {
+    "SERVER_SCOPE": []
+  }
+}
