@@ -3744,6 +3744,98 @@
           "row" : 0,
           "col" : 0,
           "id" : "e8a19f3e-0310-fda4-414f-94840c2305c7"
+        },
+        "b3294e05-3737-8023-75d5-b9a5864e2f85" : {
+          "typeFullFqn" : "tenant.collibellex.chart2",
+          "type" : "timeseries",
+          "sizeX" : 10,
+          "sizeY" : 9,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "dataKeys" : [ {
+                "name" : "temperature",
+                "type" : "timeseries",
+                "label" : "temperature",
+                "color" : "#2196f3",
+                "settings" : {
+                  "chartType" : "Line",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.5632966087144755
+              }, {
+                "name" : "humidity",
+                "type" : "timeseries",
+                "label" : "humidity",
+                "color" : "#4caf50",
+                "settings" : {
+                  "chartType" : "Line",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.6623644975013351
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "yAxisLeftAutoScale" : true,
+              "yAxisLeftMaxScale" : 100,
+              "yAxisRightAutoScale" : true,
+              "yAxisRightMaxScale" : 100,
+              "showPanZoomTool" : true,
+              "annotations" : [ {
+                "annotationsType" : "Fixed",
+                "fixedNumber" : 10,
+                "color" : "Red",
+                "attributeType" : "Client",
+                "axisAssignment" : "Left"
+              } ],
+              "yAxisLeftMinScale" : 0,
+              "yAxisRightMinScale" : 0,
+              "showDataPoints" : false
+            },
+            "title" : "Chart 2",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "mobileHeight" : null,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b3294e05-3737-8023-75d5-b9a5864e2f85"
         }
       },
       "states" : {
@@ -3820,6 +3912,13 @@
                   "sizeY" : 2,
                   "row" : 10,
                   "col" : 17
+                },
+                "b3294e05-3737-8023-75d5-b9a5864e2f85" : {
+                  "sizeX" : 10,
+                  "sizeY" : 9,
+                  "mobileHeight" : null,
+                  "row" : 22,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
