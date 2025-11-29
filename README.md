@@ -2,6 +2,16 @@
 
 IoT irrigation management system using ThingsBoard CE, ChirpStack, and LoRaWAN devices.
 
+## 🚀 Quick Start
+
+**⭐ NEW USER? START HERE**: [THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md](THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md)
+
+**❌ HAD WIDGET IMPORT ERRORS?** See: [WIDGET_IMPORT_SOLUTION.md](WIDGET_IMPORT_SOLUTION.md)
+
+**📋 Quick Reference**: [QUICK_START.md](QUICK_START.md)
+
+---
+
 ## 🌟 Features
 
 - **Real-time Monitoring**: Temperature, humidity, battery levels
@@ -33,47 +43,81 @@ fertirega_backend/
 └── FERTIREGA_DASHBOARD_SETUP.md # Complete setup guide ⭐
 ```
 
-## 🚀 Quick Start
+## 📦 What's Included
 
-### Prerequisites
+### Widgets (5 Custom Widgets)
+- **Valve 0 Control** - Toggle switch for irrigation valve 0
+- **Valve 1 Control** - Toggle switch for irrigation valve 1
+- **Device Attributes** - Info panel showing location, battery, temp, humidity
+- **Time Picker** - Scheduling interface for valve automation
+- **Reset Clock** - Device clock synchronization
 
-- ThingsBoard CE (Community Edition)
-- ChirpStack server running at `http://100.92.66.20`
-- ChirpStack API key
-- LoRaWAN devices with FertiRega firmware
+### Dashboards (2 Dashboards)
+- **FertiRega Overview** - Map view with all devices, device table, alarms
+- **FertiRega Device Details** - Single device view with controls and charts
 
-### Installation
+### Rule Chain
+- **FertiRega Alarms & Logging** - Battery low, offline detection, valve logging
 
-1. **Import Widget Bundle**:
+---
+
+## ⚡ Installation (15 Minutes)
+
+### IMPORTANT: ThingsBoard CE Import Process
+
+**ThingsBoard CE does NOT support widget bundle import** (Professional Edition only).
+
+**You must**:
+1. Create widget bundle manually in UI
+2. Import individual widgets one by one
+
+### Step-by-Step
+
+1. **Create Widget Bundle** (1 min):
    ```
-   ThingsBoard → Widget Library → + → Import widget bundle
-   Select: widgets_bundle/fertirega_widgets_bundle.json
+   ThingsBoard → Widget Library → + → Create new widgets bundle
+   Title: FertiRega Widgets
    ```
 
-2. **Configure ChirpStack API Key**:
+2. **Import 5 Widgets** (5 min):
+   ```
+   Widget Library → FertiRega Widgets → + → Import widget type
+
+   Import these files one by one:
+   - widgets_bundle/fertirega_valvecontrol_0.json
+   - widgets_bundle/fertirega_valvecontrol_1.json
+   - widgets_bundle/fertirega_deviceattributes.json
+   - widgets_bundle/fertirega_timepicker.json
+   - widgets_bundle/fertirega_resetclock.json
+   ```
+
+3. **Configure ChirpStack API Key** (5 min):
    - Edit each valve control widget in the widget library
    - Replace `YOUR_API_KEY_HERE` with your actual ChirpStack API token
+   - Widgets to update: valvecontrol_0, valvecontrol_1, timepicker, resetclock
 
-3. **Import Dashboards**:
+4. **Import Dashboards** (2 min):
    ```
    ThingsBoard → Dashboards → + → Import dashboard
    Import: dashboard_new/31b6ecf1-*.json (Overview)
    Import: dashboard_new/58351f95-*.json (Device Details)
    ```
 
-4. **Import Alarm Rule Chain**:
+5. **Import Alarm Rule Chain** (2 min):
    ```
    ThingsBoard → Rule Chains → + → Import rule chain
    Select: rule_chain/da36c158-*.json
    ```
 
-5. **Assign Rule Chain**:
+6. **Assign Rule Chain** (1 min):
    ```
    ThingsBoard → Device Profiles → FertiRega LoRa Sensor → Edit
    Set Rule Chain: FertiRega Alarms and Logging
    ```
 
-📖 **See [FERTIREGA_DASHBOARD_SETUP.md](FERTIREGA_DASHBOARD_SETUP.md) for detailed instructions**
+📖 **Complete Guide**: [THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md](THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md)
+
+---
 
 ## 🎯 Dashboard Overview
 
@@ -182,23 +226,42 @@ Rule Chain (Alarms & Logging)
 Dashboard Widgets
 ```
 
+## 📚 Documentation
+
+| Document | Purpose |
+|----------|---------|
+| **[THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md](THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md)** | ⭐ **START HERE** - Complete step-by-step import guide |
+| **[WIDGET_IMPORT_SOLUTION.md](WIDGET_IMPORT_SOLUTION.md)** | Solution for widget import errors in ThingsBoard CE |
+| **[QUICK_START.md](QUICK_START.md)** | Quick reference checklist for setup |
+| **[FERTIREGA_DASHBOARD_SETUP.md](FERTIREGA_DASHBOARD_SETUP.md)** | Detailed dashboard usage and configuration |
+| **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** | Technical architecture and delivery report |
+| **[WIDGET_CREATION_GUIDE.md](WIDGET_CREATION_GUIDE.md)** | Manual widget creation (alternative to import) |
+
+---
+
 ## 🐛 Troubleshooting
 
+**Cannot import widget bundle?**
+- ThingsBoard CE doesn't support bundle import
+- Use individual widget import method
+- See: [WIDGET_IMPORT_SOLUTION.md](WIDGET_IMPORT_SOLUTION.md)
+
 **Widgets not appearing?**
-- Verify widget bundle is imported
-- Check widget type alias: `fertirega_widgets`
+- Create bundle manually first
+- Import widgets one by one
+- Verify bundle alias: `fertirega_widgets`
 
 **Valve control not working?**
-- Configure ChirpStack API key in widgets
-- Verify ChirpStack server is accessible
-- Check device EUI resolution (use `eui-{id}` naming)
+- Configure ChirpStack API key in widgets (replace `YOUR_API_KEY_HERE`)
+- Verify ChirpStack server is accessible at `http://100.92.66.20:8080`
+- Check device EUI resolution (use `eui-{deviceEui}` naming convention)
 
 **Alarms not triggering?**
 - Assign rule chain to device profile
 - Enable debug mode on rule chain
 - Verify telemetry is being received
 
-See [FERTIREGA_DASHBOARD_SETUP.md](FERTIREGA_DASHBOARD_SETUP.md) for detailed troubleshooting.
+📖 **Complete Troubleshooting**: [THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md](THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md)
 
 ## 📝 License
 
@@ -215,13 +278,12 @@ This repository tracks ThingsBoard entity configurations for the FertiRega proje
 
 ## 📞 Support
 
-For issues or questions about:
-- Dashboard functionality
-- Widget customization
-- Alarm configuration
-- ChirpStack integration
+For issues or questions, consult the documentation:
 
-Refer to the comprehensive setup guide: [FERTIREGA_DASHBOARD_SETUP.md](FERTIREGA_DASHBOARD_SETUP.md)
+- **Import Problems**: [WIDGET_IMPORT_SOLUTION.md](WIDGET_IMPORT_SOLUTION.md)
+- **Setup Guide**: [THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md](THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md)
+- **Dashboard Usage**: [FERTIREGA_DASHBOARD_SETUP.md](FERTIREGA_DASHBOARD_SETUP.md)
+- **Technical Details**: [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)
 
 ---
 
