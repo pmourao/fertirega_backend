@@ -9,13 +9,31 @@
 
 ### Import Checklist
 
-#### ☑️ Step 1: Widget Bundle (2 min)
+#### ☑️ Step 1: Create Widget Bundle Manually (1 min)
 ```
-ThingsBoard → Widget Library → + → Import widget bundle
-📁 File: widgets_bundle/fertirega_widgets_bundle.json
+ThingsBoard → Widget Library → + → Create new widgets bundle
+Title: FertiRega Widgets
+Description: Custom widgets for FertiRega irrigation management system
 ```
 
-#### ☑️ Step 2: Configure API Key (1 min)
+**IMPORTANT**: ThingsBoard CE does NOT support importing widget bundles from JSON.
+You must create the bundle manually, then import individual widgets.
+
+#### ☑️ Step 2: Import Individual Widgets (5 min)
+```
+Widget Library → FertiRega Widgets → + → Import widget type
+
+Import these 5 files one by one:
+1. widgets_bundle/fertirega_valvecontrol_0.json
+2. widgets_bundle/fertirega_valvecontrol_1.json
+3. widgets_bundle/fertirega_deviceattributes.json
+4. widgets_bundle/fertirega_timepicker.json
+5. widgets_bundle/fertirega_resetclock.json
+```
+
+**See detailed instructions**: `THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md`
+
+#### ☑️ Step 3: Configure API Key (5 min)
 ```
 Widget Library → FertiRega Widgets → Edit each widget:
 - fertirega_valvecontrol_0
@@ -32,7 +50,7 @@ Replace: YOUR_API_KEY_HERE with ChirpStack token
 2. API Keys → Create
 3. Copy token
 
-#### ☑️ Step 3: Import Dashboards (1 min)
+#### ☑️ Step 4: Import Dashboards (2 min)
 ```
 ThingsBoard → Dashboards → + → Import dashboard
 
@@ -43,13 +61,13 @@ ThingsBoard → Dashboards → + → Import dashboard
    Name: FertiRega Device Details
 ```
 
-#### ☑️ Step 4: Import Alarm Rule Chain (1 min)
+#### ☑️ Step 5: Import Alarm Rule Chain (2 min)
 ```
 ThingsBoard → Rule Chains → + → Import rule chain
 📁 File: rule_chain/da36c158-c659-4aa0-9128-db7ca02dc2c9.json
 ```
 
-#### ☑️ Step 5: Assign Rule Chain (30 sec)
+#### ☑️ Step 6: Assign Rule Chain (1 min)
 ```
 Device Profiles → FertiRega LoRa Sensor → Edit
 Rule Chain: FertiRega Alarms and Logging
@@ -90,8 +108,12 @@ Save
 
 ## 🆘 Troubleshooting
 
+### Cannot import widget bundle?
+→ ThingsBoard CE doesn't support bundle import. Import individual widgets instead!
+→ See: `THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md`
+
 ### Widgets not showing?
-→ Re-import widget bundle, check alias: `fertirega_widgets`
+→ Create bundle manually first, then import widgets one by one
 
 ### Valve control not working?
 → Check ChirpStack API key configuration in widgets
@@ -106,12 +128,12 @@ Save
 
 ## 📖 Full Documentation
 
-See **FERTIREGA_DASHBOARD_SETUP.md** for:
-- Detailed import instructions
-- ChirpStack configuration
-- Dashboard usage guide
-- Complete troubleshooting
-- Customization options
+**⭐ START HERE**: `THINGSBOARD_CE_IMPORT_INSTRUCTIONS.md` - Complete step-by-step import guide
+
+Also available:
+- `FERTIREGA_DASHBOARD_SETUP.md` - Dashboard usage and configuration
+- `IMPLEMENTATION_SUMMARY.md` - Technical details and architecture
+- `WIDGET_CREATION_GUIDE.md` - Manual widget creation (alternative method)
 
 ---
 
@@ -132,7 +154,8 @@ See **FERTIREGA_DASHBOARD_SETUP.md** for:
 
 ## ✅ Completion Checklist
 
-- [ ] Widget bundle imported
+- [ ] Widget bundle created manually
+- [ ] 5 individual widgets imported (valvecontrol_0, valvecontrol_1, deviceattributes, timepicker, resetclock)
 - [ ] ChirpStack API key configured (4 widgets)
 - [ ] Both dashboards imported
 - [ ] Alarm rule chain imported
