@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Collibellex"
   },
-  "fqns" : [ ],
+  "fqns" : [ "collibellex.3d_chart", "collibellex.chart2", "collibellex.static", "collibellex.doube_slider2", "collibellex.fluid_level_12", "collibellex.fluid_level_2", "collibellex.gauge_1", "collibellex.gauge1", "collibellex.gauge_3", "collibellex.gauge_4", "collibellex.switch6", "collibellex.light_bulb_1", "collibellex.multi_slider", "collibellex.slider", "collibellex.round_slider_1", "collibellex.switch_1", "collibellex.switch_2", "collibellex.switch3", "collibellex.thermostat_1", "collibellex.thermostat_2", "collibellex.toggle_button_1", "collibellex.weekly_heatmap" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
