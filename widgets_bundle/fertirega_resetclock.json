@@ -1,0 +1,24 @@
+{
+  "entityType": "WIDGET_TYPE",
+  "entity": {
+    "tenantId": null,
+    "bundleAlias": "fertirega_widgets",
+    "typeAlias": "fertirega_resetclock",
+    "alias": null,
+    "title": "FertiRega Reset Clock",
+    "image": null,
+    "description": "Reset device clock/timer functionality",
+    "descriptor": {
+      "type": "RPC",
+      "sizeX": 3,
+      "sizeY": 2,
+      "resources": [],
+      "templateHtml": "<div class=\"reset-clock-container\">\n  <h4>Device Clock</h4>\n  <div class=\"clock-info\">\n    <p>Device Time: {{deviceTime | date:'medium'}}</p>\n    <p>Server Time: {{serverTime | date:'medium'}}</p>\n  </div>\n  <button class=\"reset-button\" ng-click=\"resetClock()\">Sync Clock</button>\n</div>",
+      "templateCss": ".reset-clock-container {\n  padding: 16px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.reset-clock-container h4 {\n  margin: 0 0 12px 0;\n  font-size: 14px;\n  color: #333;\n}\n\n.clock-info {\n  width: 100%;\n  margin-bottom: 12px;\n}\n\n.clock-info p {\n  margin: 4px 0;\n  font-size: 11px;\n  color: #666;\n}\n\n.reset-button {\n  padding: 8px 16px;\n  background: #2196f3;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  font-size: 12px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n\n.reset-button:hover {\n  background: #1976d2;\n}",
+      "controllerScript": "self.onInit = function() {\n    self.ctx.$scope.deviceTime = new Date();\n    self.ctx.$scope.serverTime = new Date();\n    \n    // Update server time every second\n    var timeInterval = setInterval(function() {\n        self.ctx.$scope.serverTime = new Date();\n        self.ctx.detectChanges();\n    }, 1000);\n    \n    self.ctx.$scope.resetClock = function() {\n        var devEui = self.ctx.defaultSubscription.entityId.id;\n        \n        if (self.ctx.datasources && self.ctx.datasources[0] && self.ctx.datasources[0].entity) {\n            var entity = self.ctx.datasources[0].entity;\n            if (entity.name && entity.name.startsWith('eui-')) {\n                devEui = entity.name.replace('eui-', '');\n            }\n        }\n        \n        // Send clock sync command\n        var timestamp = Math.floor(Date.now() / 1000);\n        var buffer = new Uint8Array(4);\n        buffer[0] = (timestamp >> 24) & 0xFF;\n        buffer[1] = (timestamp >> 16) & 0xFF;\n        buffer[2] = (timestamp >> 8) & 0xFF;\n        buffer[3] = timestamp & 0xFF;\n        \n        var base64 = btoa(String.fromCharCode.apply(null, buffer));\n        \n        var payload = {\n            queueItem: {\n                confirmed: true,\n                data: base64,\n                fPort: 4  // Using fPort 4 for clock sync\n            }\n        };\n        \n        var url = 'http://100.92.66.20:8080/api/devices/' + devEui + '/queue';\n        \n        self.ctx.http.post(url, payload, {\n            headers: {\n                'Content-Type': 'application/json',\n                'Grpc-Metadata-Authorization': 'Bearer YOUR_API_KEY_HERE'\n            }\n        }).subscribe(\n            function(response) {\n                self.ctx.showSuccessToast('Clock sync command sent');\n                self.ctx.$scope.deviceTime = new Date();\n            },\n            function(error) {\n                self.ctx.showErrorToast('Failed to sync clock: ' + error.message);\n            }\n        );\n    };\n    \n    self.ctx.$scope.$on('$destroy', function() {\n        clearInterval(timeInterval);\n    });\n};\n\nself.onDataUpdated = function() {\n};\n\nself.onDestroy = function() {\n};",
+      "settingsSchema": "{}",
+      "dataKeySettingsSchema": "{}",
+      "defaultConfig": "{}"
+    }
+  }
+}

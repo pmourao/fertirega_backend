@@ -1,0 +1,10 @@
+{
+  "entityType": "WIDGETS_BUNDLE",
+  "entity": {
+    "tenantId": null,
+    "title": "FertiRega Widgets",
+    "image": null,
+    "description": "Custom widgets for FertiRega irrigation management system",
+    "order": 0
+  }
+}
