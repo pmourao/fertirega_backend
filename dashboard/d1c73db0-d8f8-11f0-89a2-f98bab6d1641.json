@@ -4340,7 +4340,7 @@
             "maxLevel" : 1,
             "fetchLastLevelOnly" : false,
             "relationType" : null,
-            "deviceTypes" : [ "SI Soil Moisture Sensor" ]
+            "deviceTypes" : [ "SI Soil Moisture Sensor", "FertiRega LoRa Sensor" ]
           }
         },
         "7473a7a0-136a-63da-f2ca-f249a1336745" : {
