@@ -68,6 +68,48 @@
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "a522240b-84fe-5d77-495c-c274c58fbb32",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.6786106615402558
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.40502851509624316
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "d6332461-1bf4-f761-892e-b88e3372db4d",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude 2",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.0030633103881382295
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude 2",
+                "color" : "#ffeb3b",
+                "settings" : { },
+                "_hash" : 0.09282824968671233
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "timewindow" : {
               "displayValue" : "",
@@ -4359,6 +4401,25 @@
             "resolveMultiple" : false,
             "stateEntityParamName" : null,
             "defaultStateEntity" : null
+          }
+        },
+        "a522240b-84fe-5d77-495c-c274c58fbb32" : {
+          "id" : "a522240b-84fe-5d77-495c-c274c58fbb32",
+          "alias" : "Atoms",
+          "filter" : {
+            "type" : "deviceType",
+            "resolveMultiple" : true,
+            "deviceTypes" : [ "FertiRega LoRa Sensor" ],
+            "deviceNameFilter" : ""
+          }
+        },
+        "d6332461-1bf4-f761-892e-b88e3372db4d" : {
+          "id" : "d6332461-1bf4-f761-892e-b88e3372db4d",
+          "alias" : "Devices",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "DEVICE"
           }
         }
       },
