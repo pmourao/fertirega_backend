@@ -3871,11 +3871,12 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "61ca5437-6539-88f4-4f59-a9508eefdf1e",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "entityAliasId" : "b1b0b012-4375-7a04-2ced-37868541ca5e",
               "dataKeys" : [ {
                 "name" : "temperature",
                 "type" : "timeseries",
-                "label" : "Temperature",
+                "label" : "temperature",
                 "color" : "#2196f3",
                 "settings" : {
                   "yAxisId" : "default",
@@ -4827,7 +4828,7 @@
           "alias" : "Current Controler",
           "filter" : {
             "type" : "stateEntity",
-            "resolveMultiple" : false,
+            "resolveMultiple" : true,
             "stateEntityParamName" : null,
             "defaultStateEntity" : {
               "entityType" : "DEVICE",
