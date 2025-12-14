@@ -4087,6 +4087,7 @@
             "settings" : {
               "showLegend" : true,
               "legendConfig" : {
+                "direction" : "column",
                 "position" : "top",
                 "sortDataKeys" : false,
                 "showMin" : false,
@@ -4444,10 +4445,10 @@
                   "mobileHeight" : 4
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
-                  "sizeX" : 18,
+                  "sizeX" : 32,
                   "sizeY" : 15,
                   "row" : 12,
-                  "col" : 14,
+                  "col" : 0,
                   "mobileOrder" : 8
                 },
                 "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
@@ -4459,8 +4460,8 @@
                 },
                 "e18122c8-7973-5206-792a-cfa7f924a7b0" : {
                   "sizeX" : 16,
-                  "sizeY" : 8,
-                  "row" : 19,
+                  "sizeY" : 15,
+                  "row" : 12,
                   "col" : 32,
                   "mobileOrder" : 6
                 },
@@ -4480,23 +4481,23 @@
                   "col" : 13
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
-                  "sizeX" : 18,
+                  "sizeX" : 16,
                   "sizeY" : 12,
                   "row" : 0,
-                  "col" : 14
+                  "col" : 32
                 },
                 "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
                   "sizeX" : 14,
-                  "sizeY" : 19,
+                  "sizeY" : 6,
                   "row" : 6,
                   "col" : 0
                 },
                 "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
-                  "sizeX" : 16,
-                  "sizeY" : 19,
+                  "sizeX" : 18,
+                  "sizeY" : 12,
                   "mobileHeight" : null,
                   "row" : 0,
-                  "col" : 32
+                  "col" : 14
                 }
               },
               "gridSettings" : {
@@ -4857,13 +4858,17 @@
           "id" : "b1b0b012-4375-7a04-2ced-37868541ca5e",
           "alias" : "Current Controler",
           "filter" : {
-            "type" : "stateEntity",
+            "type" : "deviceSearchQuery",
             "resolveMultiple" : true,
+            "rootStateEntity" : true,
             "stateEntityParamName" : null,
-            "defaultStateEntity" : {
-              "entityType" : "DEVICE",
-              "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
-            }
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "deviceTypes" : [ "FertiRega LoRa Sensor" ]
           }
         }
       },
