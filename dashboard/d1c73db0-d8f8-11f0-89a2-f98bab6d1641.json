@@ -75,37 +75,28 @@
                 "name" : "latitude",
                 "type" : "attribute",
                 "label" : "latitude",
-                "color" : "#8bc34a",
+                "color" : "#E2F403",
                 "settings" : { },
-                "_hash" : 0.6786106615402558
+                "_hash" : 0.07365817376499595,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "var a =  39.14659927863099\n\nreturn   a;"
               }, {
                 "name" : "longitude",
                 "type" : "attribute",
                 "label" : "longitude",
                 "color" : "#3f51b5",
                 "settings" : { },
-                "_hash" : 0.40502851509624316
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            }, {
-              "type" : "entity",
-              "entityAliasId" : "d6332461-1bf4-f761-892e-b88e3372db4d",
-              "dataKeys" : [ {
-                "name" : "latitude",
-                "type" : "attribute",
-                "label" : "latitude 2",
-                "color" : "#e91e63",
-                "settings" : { },
-                "_hash" : 0.0030633103881382295
-              }, {
-                "name" : "longitude",
-                "type" : "attribute",
-                "label" : "longitude 2",
-                "color" : "#ffeb3b",
-                "settings" : { },
-                "_hash" : 0.09282824968671233
+                "_hash" : 0.5700148222470739,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return -8.689830507106596;"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
