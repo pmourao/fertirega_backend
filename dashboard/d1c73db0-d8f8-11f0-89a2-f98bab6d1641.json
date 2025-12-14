@@ -8,6 +8,20 @@
       },
       "title" : "Customer A",
       "public" : false
+    }, {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b51bab90-bd9d-11f0-9f62-dbf745488a54"
+      },
+      "title" : "Customer C",
+      "public" : false
+    }, {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b51ac130-bd9d-11f0-9f62-dbf745488a54"
+      },
+      "title" : "Customer B",
+      "public" : false
     } ],
     "configuration" : {
       "description" : "",
@@ -4446,8 +4460,8 @@
                   "sizeY" : 12,
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
-                  "row" : 0,
-                  "col" : 32
+                  "row" : 27,
+                  "col" : 22
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 18,
@@ -4457,16 +4471,16 @@
                 },
                 "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
                   "sizeX" : 14,
-                  "sizeY" : 6,
+                  "sizeY" : 19,
                   "row" : 6,
                   "col" : 0
                 },
                 "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
-                  "sizeX" : 14,
-                  "sizeY" : 15,
+                  "sizeX" : 16,
+                  "sizeY" : 12,
                   "mobileHeight" : null,
-                  "row" : 12,
-                  "col" : 0
+                  "row" : 0,
+                  "col" : 32
                 }
               },
               "gridSettings" : {
