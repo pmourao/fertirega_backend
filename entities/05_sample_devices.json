@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Moisture Sensor A1",
+    "type": "SI Soil Moisture Sensor",
+    "label": "Sensor A1",
+    "deviceProfileName": "SI Soil Moisture Sensor",
+    "fieldAssociation": "Field A - Wheat",
+    "additionalInfo": {
+      "description": "Soil moisture sensor in Field A - North section"
+    },
+    "attributes": {
+      "server": {
+        "active": true,
+        "latitude": 37.42140,
+        "longitude": -122.08350,
+        "maxMoistureThreshold": 80,
+        "minMoistureThreshold": 40,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  },
+  {
+    "name": "Moisture Sensor A2",
+    "type": "SI Soil Moisture Sensor",
+    "label": "Sensor A2",
+    "deviceProfileName": "SI Soil Moisture Sensor",
+    "fieldAssociation": "Field A - Wheat",
+    "additionalInfo": {
+      "description": "Soil moisture sensor in Field A - South section"
+    },
+    "attributes": {
+      "server": {
+        "active": true,
+        "latitude": 37.42110,
+        "longitude": -122.08350,
+        "maxMoistureThreshold": 80,
+        "minMoistureThreshold": 40,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  },
+  {
+    "name": "Moisture Sensor B1",
+    "type": "SI Soil Moisture Sensor",
+    "label": "Sensor B1",
+    "deviceProfileName": "SI Soil Moisture Sensor",
+    "fieldAssociation": "Field B - Corn",
+    "additionalInfo": {
+      "description": "Soil moisture sensor in Field B - Center"
+    },
+    "attributes": {
+      "server": {
+        "active": true,
+        "latitude": 37.42140,
+        "longitude": -122.08150,
+        "maxMoistureThreshold": 75,
+        "minMoistureThreshold": 45,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  },
+  {
+    "name": "Moisture Sensor C1",
+    "type": "SI Soil Moisture Sensor",
+    "label": "Sensor C1",
+    "deviceProfileName": "SI Soil Moisture Sensor",
+    "fieldAssociation": "Field C - Vegetables",
+    "additionalInfo": {
+      "description": "Soil moisture sensor in Field C - West section"
+    },
+    "attributes": {
+      "server": {
+        "active": true,
+        "latitude": 37.42140,
+        "longitude": -122.07950,
+        "maxMoistureThreshold": 85,
+        "minMoistureThreshold": 50,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  },
+  {
+    "name": "Water Meter A",
+    "type": "SI Water Meter",
+    "label": "Meter A",
+    "deviceProfileName": "SI Water Meter",
+    "fieldAssociation": "Field A - Wheat",
+    "additionalInfo": {
+      "description": "Water meter for Field A irrigation system"
+    },
+    "attributes": {
+      "server": {
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  },
+  {
+    "name": "Smart Valve A",
+    "type": "SI Smart Valve",
+    "label": "Valve A",
+    "deviceProfileName": "SI Smart Valve",
+    "fieldAssociation": "Field A - Wheat",
+    "additionalInfo": {
+      "description": "Main irrigation valve for Field A"
+    },
+    "attributes": {
+      "server": {
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0
+      }
+    }
+  }
+]

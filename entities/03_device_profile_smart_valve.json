@@ -1,0 +1,72 @@
+{
+  "name": "SI Smart Valve",
+  "type": "DEFAULT",
+  "transportType": "DEFAULT",
+  "provisionType": "DISABLED",
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "DEFAULT"
+    },
+    "alarms": [
+      {
+        "id": "low_battery_alarm",
+        "alarmType": "Low Battery",
+        "createRules": {
+          "CRITICAL": {
+            "condition": {
+              "condition": [
+                {
+                  "key": {
+                    "type": "TIME_SERIES",
+                    "key": "battery"
+                  },
+                  "valueType": "NUMERIC",
+                  "value": 30,
+                  "predicate": {
+                    "type": "NUMERIC",
+                    "operation": "LESS"
+                  }
+                }
+              ],
+              "spec": {
+                "type": "SIMPLE"
+              }
+            },
+            "schedule": null,
+            "alarmDetails": "Battery level is below 30%"
+          }
+        },
+        "clearRule": {
+          "condition": {
+            "condition": [
+              {
+                "key": {
+                  "type": "TIME_SERIES",
+                  "key": "battery"
+                },
+                "valueType": "NUMERIC",
+                "value": 30,
+                "predicate": {
+                  "type": "NUMERIC",
+                  "operation": "GREATER_OR_EQUAL"
+                }
+              }
+            ],
+            "spec": {
+              "type": "SIMPLE"
+            }
+          },
+          "schedule": null,
+          "alarmDetails": "Battery level is normal"
+        },
+        "propagate": true,
+        "propagateToOwner": false,
+        "propagateToTenant": false
+      }
+    ]
+  },
+  "description": "Smart Valve for Smart Irrigation with RPC control"
+}

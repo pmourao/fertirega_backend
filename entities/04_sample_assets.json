@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Field A - Wheat",
+    "type": "SI Field",
+    "label": "Field A",
+    "additionalInfo": {
+      "description": "Main wheat field with automated irrigation"
+    },
+    "attributes": {
+      "server": {
+        "cropType": "Wheat",
+        "maxMoistureThreshold": 80,
+        "minMoistureThreshold": 40,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0,
+        "perimeter": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-122.084, 37.4219],
+              [-122.083, 37.4219],
+              [-122.083, 37.4209],
+              [-122.084, 37.4209],
+              [-122.084, 37.4219]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Field B - Corn",
+    "type": "SI Field",
+    "label": "Field B",
+    "additionalInfo": {
+      "description": "Corn field with drip irrigation system"
+    },
+    "attributes": {
+      "server": {
+        "cropType": "Corn",
+        "maxMoistureThreshold": 75,
+        "minMoistureThreshold": 45,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0,
+        "perimeter": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-122.082, 37.4219],
+              [-122.081, 37.4219],
+              [-122.081, 37.4209],
+              [-122.082, 37.4209],
+              [-122.082, 37.4219]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Field C - Vegetables",
+    "type": "SI Field",
+    "label": "Field C",
+    "additionalInfo": {
+      "description": "Mixed vegetable field"
+    },
+    "attributes": {
+      "server": {
+        "cropType": "Vegetables",
+        "maxMoistureThreshold": 85,
+        "minMoistureThreshold": 50,
+        "criticalAlarmsCount": 0,
+        "majorAlarmsCount": 0,
+        "perimeter": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-122.080, 37.4219],
+              [-122.079, 37.4219],
+              [-122.079, 37.4209],
+              [-122.080, 37.4209],
+              [-122.080, 37.4219]
+            ]
+          ]
+        }
+      }
+    }
+  }
+]
