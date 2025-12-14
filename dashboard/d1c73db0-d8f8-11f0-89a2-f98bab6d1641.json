@@ -625,7 +625,7 @@
               "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
               "entityAliasId" : "aa55618a-278a-0776-832d-fa1fe5769a2a",
               "filterId" : null,
-              "dataKeys" : null,
+              "dataKeys" : [ ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
@@ -3372,9 +3372,6 @@
               } ]
             } ],
             "timewindow" : {
-              "hideInterval" : false,
-              "hideLastInterval" : false,
-              "hideQuickInterval" : false,
               "hideAggregation" : false,
               "hideAggInterval" : false,
               "hideTimezone" : false,
@@ -4106,6 +4103,83 @@
           "col" : 0,
           "id" : "534c29aa-f483-ee66-1a38-e899e77a8ea5",
           "typeFullFqn" : "system.cards.entities_table"
+        },
+        "d20e83c8-af5c-a342-efac-cbc31bf47660" : {
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "61ca5437-6539-88f4-4f59-a9508eefdf1e",
+              "filterId" : null,
+              "dataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1668004676539,
+                  "endTimeMs" : 1668091076539
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class=\"main-layout\" style=\"width: 100%;\" fxLayout=\"column\">\n    <tb-dashboard-state \n        style=\"height: 160px; width: 100%;\"\n        [ctx]=\"ctx\"\n        stateId=\"moisture_sensor_details_brief\"\n        [entityId]=\"{ entityType: 'DEVICE', id: '${entityId}' }\"> \n    </tb-dashboard-state>\n    <mat-expansion-panel id=\"${entityId}\" class=\"tb-settings\" \n         (expandedChange)=\"showDetails = $event; ctx.popoverComponent?.resize($event ? '400px' : '300px', $event ? '570px' : '250px', 200)\">\n        <mat-expansion-panel-header fxLayout=\"row wrap\">\n            <mat-panel-description fxLayoutAlign=\"end center\">\n                View details\n            </mat-panel-description>\n        </mat-expansion-panel-header>\n        <ng-template matExpansionPanelContent>\n            <div style=\"height: 80px; width: 100%;\">\n                <tb-dashboard-state \n                    *ngIf=\"showDetails\"\n                    style=\"height: 100%; width: 100%;\"\n                    [ctx]=\"ctx\"\n                    stateId=\"moisture_sensor_details_alarms\"\n                    [entityId]=\"{ entityType: 'DEVICE', id: '${entityId}' }\">\n                </tb-dashboard-state>\n            </div>\n            <div style=\"height: 200px; width: 100%;\">\n                <tb-dashboard-state \n                    *ngIf=\"showDetails\"\n                    style=\"height: 100%; width: 100%;\"\n                    [ctx]=\"ctx\"\n                    stateId=\"moisture_sensor_details_moisture\"\n                    [entityId]=\"{ entityType: 'DEVICE', id: '${entityId}' }\">\n                </tb-dashboard-state>\n            </div>\n        </ng-template>\n    </mat-expansion-panel>\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff !important;\n}\n\n.tb-markdown-view {\n    overflow: hidden !important;\n}\n\n.tb-markdown-view > div {\n    padding: 0;\n}\n"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : ".tb-widget-container > .tb-widget {\n    border-radius: 0px;\n    box-shadow: none;\n}\n\n.tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff !important;\n}\n\n.mat-expansion-panel.tb-settings {\n    box-shadow: none;\n}\n\n.mat-expansion-panel.tb-settings .mat-content {\n    overflow: visible;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header {\n    padding: 0;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header:hover {\n    background: none;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header .mat-expansion-indicator {\n    padding: 2px;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header-description {\n    align-items: center;\n    font-weight: 600;\n    font-size: 13px;\n    margin-right: 8px;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header .mat-expansion-indicator:after, .mat-expansion-panel.tb-settings .mat-expansion-panel-header-description {\n    color: #5553AF;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header .mat-expansion-indicator {\n    padding: 0 2px;\n    font-size: 13px;\n}\n\n.mat-expansion-panel.tb-settings .mat-expansion-panel-header .mat-expansion-indicator:after {\n    vertical-align: baseline;\n}\n\n.mat-expansion-panel.tb-settings > .mat-expansion-panel-content > .mat-expansion-panel-body {\n    padding: 0;\n}\n\n.mat-expansion-panel .mat-expansion-panel-content { \n    font: inherit;\n}\n\ndiv.tb-widget .tb-timewindow.no-padding {\n    padding: 0 8px;\n    border: 1px solid rgba(0, 0, 0, 0.08);\n    border-radius: 8px;\n    color: #868D9C;\n    font-weight: 400;\n    font-size: 12px;\n}\n\n.tb-timewindow .mat-icon-button {\n    width: 18px;\n    line-height: 18px;\n    height: 18px;\n    margin-right: 4px;\n}\n\n.tb-timewindow .mat-icon-button .mat-icon {\n    width: 15px;\n    font-size: 15px;\n    line-height: 15px;\n    height: 15px;\n}",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d20e83c8-af5c-a342-efac-cbc31bf47660",
+          "typeFullFqn" : "system.cards.markdown_card"
         }
       },
       "states" : {
@@ -4444,6 +4518,34 @@
             "main" : {
               "widgets" : {
                 "8923d335-d974-2aaa-8c40-3eafec174a58" : {
+                  "sizeX" : 24,
+                  "sizeY" : 11,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#ffffff",
+                "columns" : 24,
+                "margin" : 0,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : true,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : true,
+                "mobileRowHeight" : 70,
+                "outerMargin" : true,
+                "layoutType" : "default"
+              }
+            }
+          }
+        },
+        "controler_details" : {
+          "name" : "Controler details",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "d20e83c8-af5c-a342-efac-cbc31bf47660" : {
                   "sizeX" : 24,
                   "sizeY" : 11,
                   "row" : 0,
