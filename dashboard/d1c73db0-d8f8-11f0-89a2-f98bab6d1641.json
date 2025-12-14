@@ -4821,6 +4821,19 @@
             "resolveMultiple" : true,
             "entityType" : "DEVICE"
           }
+        },
+        "b1b0b012-4375-7a04-2ced-37868541ca5e" : {
+          "id" : "b1b0b012-4375-7a04-2ced-37868541ca5e",
+          "alias" : "Current Controler",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+            }
+          }
         }
       },
       "filters" : { },
