@@ -4420,8 +4420,8 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 14,
-                  "sizeY" : 12,
+                  "sizeX" : 13,
+                  "sizeY" : 4,
                   "row" : 27,
                   "col" : 0,
                   "mobileOrder" : 7,
@@ -4456,12 +4456,12 @@
                   "mobileOrder" : 0
                 },
                 "7dadc15d-b85b-8ef0-5de1-6c23d0acea73" : {
-                  "sizeX" : 16,
-                  "sizeY" : 12,
+                  "sizeX" : 7,
+                  "sizeY" : 4,
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
                   "row" : 27,
-                  "col" : 22
+                  "col" : 13
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 18,
