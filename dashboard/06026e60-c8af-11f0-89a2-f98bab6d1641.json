@@ -1,7 +1,14 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : null,
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b51039e0-bd9d-11f0-9f62-dbf745488a54"
+      },
+      "title" : "Customer A",
+      "public" : false
+    } ],
     "configuration" : {
       "description" : "",
       "widgets" : {
@@ -3953,6 +3960,103 @@
           "row" : 0,
           "col" : 0,
           "id" : "cbe67419-3b2f-e84b-b791-eab5c3514d77"
+        },
+        "a6f3857b-1963-541c-f8fa-d7df8ad111c0" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1765640531622,
+                  "endTimeMs" : 1765726931622
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "name",
+              "useRowStyleFunction" : false,
+              "entitiesTitle" : "Entities"
+            },
+            "title" : "Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "entityAliasId" : "2e9e7506-0f3e-2399-2bbf-a4d1f00707ad",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.48774866191894195
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "displayTimewindow" : false,
+            "configMode" : "basic",
+            "actions" : { },
+            "showTitleIcon" : false,
+            "titleIcon" : "list",
+            "iconColor" : null,
+            "titleFont" : null,
+            "titleColor" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "a6f3857b-1963-541c-f8fa-d7df8ad111c0"
         }
       },
       "states" : {
@@ -4035,6 +4139,12 @@
                   "sizeY" : 9,
                   "mobileHeight" : null,
                   "row" : 22,
+                  "col" : 0
+                },
+                "a6f3857b-1963-541c-f8fa-d7df8ad111c0" : {
+                  "sizeX" : 7,
+                  "sizeY" : 6,
+                  "row" : 31,
                   "col" : 0
                 }
               },
@@ -4215,6 +4325,15 @@
             "resolveMultiple" : false,
             "stateEntityParamName" : "selected_device",
             "defaultStateEntity" : null
+          }
+        },
+        "2e9e7506-0f3e-2399-2bbf-a4d1f00707ad" : {
+          "id" : "2e9e7506-0f3e-2399-2bbf-a4d1f00707ad",
+          "alias" : "Fields",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "ASSET"
           }
         }
       },
