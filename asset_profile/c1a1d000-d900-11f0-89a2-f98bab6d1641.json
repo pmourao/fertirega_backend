@@ -6,7 +6,7 @@
     "defaultEdgeRuleChainId" : null,
     "defaultQueueName" : null,
     "defaultRuleChainId" : null,
-    "description" : null,
+    "description" : "Default asset profile",
     "externalId" : null,
     "id" : {
       "entityType" : "ASSET_PROFILE",
