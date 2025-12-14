@@ -2,7 +2,7 @@
   "entityType" : "ASSET",
   "entity" : {
     "additionalInfo" : {
-      "description" : ""
+      "description" : "Main wheat field with automated irrigation"
     },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
@@ -23,6 +23,54 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "criticalAlarmsCount",
+      "lastUpdateTs" : 1765725986075,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cropType",
+      "lastUpdateTs" : 1765725897979,
+      "longValue" : null,
+      "strValue" : "Wheat"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "majorAlarmsCount",
+      "lastUpdateTs" : 1765726007838,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "maxMoistureThreshold",
+      "lastUpdateTs" : 1765725936105,
+      "longValue" : 80,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "minMoistureThreshold",
+      "lastUpdateTs" : 1765725943462,
+      "longValue" : 40,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"type\":\"Polygon\",\"coordinates\":[[[-122.084,37.4219],[-122.083,37.4219],[-122.083,37.4209],[-122.084,37.4209],[-122.084,37.4219]]]}",
+      "key" : "perimeter",
+      "lastUpdateTs" : 1765725974116,
+      "longValue" : null,
+      "strValue" : null
+    } ]
   }
 }
