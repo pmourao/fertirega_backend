@@ -1,7 +1,14 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : null,
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b51039e0-bd9d-11f0-9f62-dbf745488a54"
+      },
+      "title" : "Customer A",
+      "public" : false
+    } ],
     "configuration" : {
       "description" : "",
       "widgets" : {
@@ -4718,8 +4725,8 @@
           "filter" : {
             "type" : "assetType",
             "resolveMultiple" : true,
-            "assetNameFilter" : "",
-            "assetTypes" : [ "SI Field" ]
+            "assetTypes" : [ "SI Field", "ASSET_PROFILE" ],
+            "assetNameFilter" : ""
           }
         },
         "39927380-423a-872a-0843-de34f99264ad" : {
