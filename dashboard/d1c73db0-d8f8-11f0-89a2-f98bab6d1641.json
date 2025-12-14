@@ -4053,9 +4053,26 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 60000,
+                "interval" : 60000,
+                "timewindowMs" : 18000000,
                 "quickInterval" : "CURRENT_DAY",
-                "interval" : 1000
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1765665251848,
+                  "endTimeMs" : 1765751651848
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
               },
               "aggregation" : {
                 "type" : "AVG",
@@ -4442,8 +4459,8 @@
                 },
                 "e18122c8-7973-5206-792a-cfa7f924a7b0" : {
                   "sizeX" : 16,
-                  "sizeY" : 15,
-                  "row" : 12,
+                  "sizeY" : 8,
+                  "row" : 19,
                   "col" : 32,
                   "mobileOrder" : 6
                 },
@@ -4476,7 +4493,7 @@
                 },
                 "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
                   "sizeX" : 16,
-                  "sizeY" : 12,
+                  "sizeY" : 19,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 32
