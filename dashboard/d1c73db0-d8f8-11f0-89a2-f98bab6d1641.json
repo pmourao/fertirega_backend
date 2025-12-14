@@ -4321,7 +4321,7 @@
           "alias" : "Current field",
           "filter" : {
             "type" : "entityList",
-            "resolveMultiple" : true,
+            "resolveMultiple" : false,
             "entityType" : "ASSET",
             "entityList" : [ "d8fde270-d900-11f0-89a2-f98bab6d1641" ]
           }
