@@ -3951,7 +3951,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
-              "entitiesTitle" : "Controladores",
+              "entitiesTitle" : "Controlers",
               "enableSearch" : true,
               "enableSelectColumnDisplay" : true,
               "enableStickyHeader" : true,
@@ -4073,12 +4073,12 @@
                 "id" : "6f239e8e-0b5d-fa30-a836-c22b83afaffa"
               } ],
               "rowClick" : [ {
-                "name" : "Moisture sensor details",
+                "name" : "Controler details",
                 "icon" : "more_horiz",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboardState",
-                "targetDashboardStateId" : "moisture_sensor_details",
+                "targetDashboardStateId" : "controler_details",
                 "setEntityId" : true,
                 "stateEntityParamName" : null,
                 "openRightLayout" : false,
