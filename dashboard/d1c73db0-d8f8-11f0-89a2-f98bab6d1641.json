@@ -4392,7 +4392,7 @@
         "stateControllerId" : "entity",
         "showTitle" : false,
         "showDashboardsSelect" : false,
-        "showEntitiesSelect" : false,
+        "showEntitiesSelect" : true,
         "showDashboardTimewindow" : false,
         "showDashboardExport" : true,
         "toolbarAlwaysOpen" : true,
