@@ -18,6 +18,27 @@
           "sizeY" : 6,
           "config" : {
             "datasources" : [ {
+              "type" : "device",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.5267525569428633
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.09719988517327705
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
               "type" : "entity",
               "name" : null,
               "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
@@ -64,39 +85,6 @@
                 "color" : "#3f51b5",
                 "settings" : { },
                 "_hash" : 0.024053653116780316
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            }, {
-              "type" : "entity",
-              "entityAliasId" : "a522240b-84fe-5d77-495c-c274c58fbb32",
-              "dataKeys" : [ {
-                "name" : "latitude",
-                "type" : "attribute",
-                "label" : "latitude",
-                "color" : "#E2F403",
-                "settings" : { },
-                "_hash" : 0.07365817376499595,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : true,
-                "postFuncBody" : "var a =  39.14659927863099\n\nreturn   a;"
-              }, {
-                "name" : "longitude",
-                "type" : "attribute",
-                "label" : "longitude",
-                "color" : "#3f51b5",
-                "settings" : { },
-                "_hash" : 0.5700148222470739,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : true,
-                "postFuncBody" : "return -8.689830507106596;"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -170,46 +158,44 @@
               "mapPageSize" : 16384,
               "markerOffsetX" : 0.5,
               "markerOffsetY" : 1,
-              "posFunction" : "return {x: origXPos, y: origYPos};",
-              "draggableMarker" : false,
+              "draggableMarker" : true,
               "showLabel" : true,
               "useLabelFunction" : false,
               "label" : "${entityName}",
-              "labelFunction" : null,
               "showTooltip" : true,
               "showTooltipAction" : "click",
               "autocloseTooltip" : true,
               "useTooltipFunction" : false,
               "tooltipPattern" : "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Temperature:</b> ${temperature} °C<br/><small>See advanced settings for details</small>",
-              "tooltipFunction" : null,
               "tooltipOffsetX" : 0,
               "tooltipOffsetY" : -1,
               "color" : "#fe7569",
               "useColorFunction" : false,
-              "colorFunction" : null,
               "useMarkerImageFunction" : false,
               "markerImage" : null,
               "markerImageSize" : 34,
-              "markerImageFunction" : null,
-              "markerImages" : [ ],
               "showPolygon" : true,
               "polygonKeyName" : "perimeter",
               "editablePolygon" : true,
               "showPolygonLabel" : true,
               "usePolygonLabelFunction" : true,
+              "polygonLabel" : "${entityName}",
               "polygonLabelFunction" : "var html = '<div>';\nhtml += '<div style=\"color: #FFF; font-weight: 600; text-align: center; padding-bottom: 8px;\">${entityName} (${cropType})</div>';\n\nvar avgMoisture = data['avgMoisture'];\nvar avgMoistureText = avgMoisture !== '' ?  Number(avgMoisture).toFixed(1) + '%' : 'n/a';\nvar minMoistureThreshold = data['minMoistureThreshold'];\nvar maxMoistureThreshold = data['maxMoistureThreshold'];\nvar color = '#FFFFFF';\nvar textColor = '#000000';\nif (avgMoisture < minMoistureThreshold || avgMoisture > maxMoistureThreshold) {\n    color = '#D12730';\n    textColor = '#FFFFFF';\n}\n\nhtml += '<div style=\"text-align: center;\"><span style=\"background: ' + color + '; color: ' + textColor + '; border-radius: 8px; padding: 4px;\">'+avgMoistureText+'</span></div>';\n\nhtml += '<div>';\n\nreturn html;",
               "showPolygonTooltip" : true,
               "showPolygonTooltipAction" : "click",
               "autoClosePolygonTooltip" : true,
               "usePolygonTooltipFunction" : false,
               "polygonTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "polygonTooltipFunction" : null,
               "polygonColor" : "#3388ff",
               "polygonOpacity" : 0.2,
               "usePolygonColorFunction" : false,
+              "polygonColorFunction" : null,
               "polygonStrokeColor" : "#3388ff",
               "polygonStrokeOpacity" : 1,
               "polygonStrokeWeight" : 3,
               "usePolygonStrokeColorFunction" : false,
+              "polygonStrokeColorFunction" : null,
               "showCircle" : false,
               "circleKeyName" : "perimeter",
               "editableCircle" : false,
