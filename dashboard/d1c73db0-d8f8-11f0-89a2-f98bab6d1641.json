@@ -597,135 +597,64 @@
             "useDashboardTimewindow" : false,
             "showLegend" : false,
             "datasources" : [ {
-              "type" : "entity",
+              "type" : "device",
               "name" : null,
-              "entityAliasId" : "aa55618a-278a-0776-832d-fa1fe5769a2a",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#2196f3",
-                "settings" : {
-                  "columnWidth" : "70px",
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : false,
-                  "defaultColumnVisibility" : "visible",
-                  "columnSelectionToDisplay" : "enabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.964011137179303,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "label",
-                "type" : "entityField",
-                "label" : "Label",
-                "color" : "#9c27b0",
-                "settings" : {
-                  "columnWidth" : "60px",
-                  "useCellStyleFunction" : true,
-                  "cellStyleFunction" : "return {\n    fontWeight: 600\n};\n",
-                  "useCellContentFunction" : true,
-                  "cellContentFunction" : "return value ? '<span style=\"background: rgba(111, 116, 242, 0.08); border-radius: 16px; padding: 4px 8px; color: #5553AF; white-space: nowrap;\">'+value+'</span>' : '';",
-                  "defaultColumnVisibility" : "visible",
-                  "columnSelectionToDisplay" : "enabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.5996920850265313,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "moisture",
-                "type" : "timeseries",
-                "label" : "moisture",
-                "color" : "#4caf50",
-                "settings" : {
-                  "columnWidth" : "50px",
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : true,
-                  "cellContentFunction" : "if (value) {\n    var minMoistureThreshold = entity['minMoistureThreshold'];\n    var maxMoistureThreshold = entity['maxMoistureThreshold'];\n    var background = '111, 116, 242';\n    var textColor = '#5553AF';\n    if (value < minMoistureThreshold || value > maxMoistureThreshold) {\n        background = '209, 39, 48';\n        textColor = '#D12730';\n    }\n    var percent = value + '%';\n    var percentText = value.toFixed(0) + '%';\n    return '<div style=\"width: 100%; max-width: 100px; height: 16px; background: linear-gradient(to right, rgba('+background+', 0.16) '+percent+', rgba('+background+', 0.08) '+percent+'); border-radius: 5.21053px; line-height: normal;\"><span style=\"padding-left: 4px; font-weight: 600; font-size: 13px; color: '+textColor+';\">'+percentText+'</span></div>';\n} else {\n    return 'No data';\n}",
-                  "defaultColumnVisibility" : "visible",
-                  "columnSelectionToDisplay" : "enabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.9864372687388072,
-                "aggregationType" : "NONE",
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "active",
+                "name" : "deviceName",
                 "type" : "attribute",
-                "label" : "active",
-                "color" : "#f44336",
-                "settings" : {
-                  "columnWidth" : "40px",
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : true,
-                  "cellContentFunction" : "var text = value === 'true' ? 'On' : 'Off';\nvar color = value === 'true' ? '#198038' : 'red';\nreturn '<div><span style=\"width: 4px; height: 4px; border-radius: 2px; background: '+color+'; display: inline-block; vertical-align: middle;\"></span><span style=\"padding-left: 8px;\">'+text+'</span></div>';",
-                  "defaultColumnVisibility" : "visible",
-                  "columnSelectionToDisplay" : "enabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.49788361286301885,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "minMoistureThreshold",
-                "type" : "attribute",
-                "label" : "minMoistureThreshold",
+                "label" : "deviceName",
                 "color" : "#8bc34a",
-                "settings" : {
-                  "columnWidth" : "0px",
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : false,
-                  "defaultColumnVisibility" : "hidden",
-                  "columnSelectionToDisplay" : "disabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.8242338033703862,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
+                "settings" : { },
+                "_hash" : 0.2436924078848982
               }, {
-                "name" : "maxMoistureThreshold",
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "battery_percentage",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.7402173249549433
+              }, {
+                "name" : "humidity",
+                "type" : "timeseries",
+                "label" : "humidity",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.9665879553327739
+              }, {
+                "name" : "temperature",
+                "type" : "timeseries",
+                "label" : "temperature",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.9671268153926273
+              }, {
+                "name" : "lastActivityTime",
                 "type" : "attribute",
-                "label" : "maxMoistureThreshold",
-                "color" : "#3f51b5",
-                "settings" : {
-                  "columnWidth" : "0px",
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : false,
-                  "defaultColumnVisibility" : "hidden",
-                  "columnSelectionToDisplay" : "disabled",
-                  "columnExportOption" : "onlyVisible"
-                },
-                "_hash" : 0.31385567303616213,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              } ]
+                "label" : "lastActivityTime",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.2506646219633194
+              }, {
+                "name" : "lastConnectTime",
+                "type" : "attribute",
+                "label" : "lastConnectTime",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.962894231660291
+              }, {
+                "name" : "lastDisconnectTime",
+                "type" : "attribute",
+                "label" : "lastDisconnectTime",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.283330797282734
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "displayTimewindow" : true,
             "showTitleIcon" : false,
