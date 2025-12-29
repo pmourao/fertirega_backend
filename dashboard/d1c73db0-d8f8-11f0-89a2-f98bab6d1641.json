@@ -40,7 +40,7 @@
                 "label" : "polygon",
                 "color" : "#8bc34a",
                 "settings" : { },
-                "_hash" : 0.16793194431394953
+                "_hash" : 0.8936063765014108
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
