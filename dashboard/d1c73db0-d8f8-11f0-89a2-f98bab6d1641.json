@@ -35,19 +35,12 @@
               "type" : "device",
               "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
               "dataKeys" : [ {
-                "name" : "latitude",
+                "name" : "polygon",
                 "type" : "attribute",
-                "label" : "latitude",
+                "label" : "polygon",
                 "color" : "#8bc34a",
                 "settings" : { },
-                "_hash" : 0.5267525569428633
-              }, {
-                "name" : "longitude",
-                "type" : "attribute",
-                "label" : "longitude",
-                "color" : "#3f51b5",
-                "settings" : { },
-                "_hash" : 0.09719988517327705
+                "_hash" : 0.16793194431394953
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
