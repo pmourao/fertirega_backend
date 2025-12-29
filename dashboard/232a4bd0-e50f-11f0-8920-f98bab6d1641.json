@@ -1,0 +1,419 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "Main dashboard for irrigation field monitoring with map and table view",
+      "widgets" : {
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567890" : {
+          "typeFullFqn" : "system.maps.openstreet_map",
+          "type" : "latest",
+          "sizeX" : 12,
+          "sizeY" : 10,
+          "row" : 0,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "Irrigation Fields",
+              "entityAliasId" : "21fe6e26-ed4e-dd90-aa9e-58bdf51a8fa3",
+              "dataKeys" : [ {
+                "name" : "polygon",
+                "type" : "attribute",
+                "label" : "Field Polygon",
+                "color" : "#00FF00",
+                "settings" : { },
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null
+              }, {
+                "name" : "session_flow_0",
+                "type" : "timeseries",
+                "label" : "Flow Status",
+                "color" : "#2196F3",
+                "settings" : { },
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null
+              }, {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery %",
+                "color" : "#FFC107",
+                "settings" : { },
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1766964798487,
+                  "endTimeMs" : 1767051198487
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "mapProvider" : "openstreet-map",
+              "defaultZoomLevel" : 15,
+              "useDefaultCenterPosition" : false,
+              "defaultCenterPosition" : [ 41.1579, -8.6291 ],
+              "fitMapBounds" : true,
+              "disableScrollZooming" : false,
+              "showPolygon" : true,
+              "polygonKeyName" : "polygon",
+              "polColor" : "#3388ff",
+              "polOpacity" : 0.5,
+              "polStrokeColor" : "#3388ff",
+              "polStrokeOpacity" : 1,
+              "polStrokeWeight" : 3,
+              "showPolygonTooltip" : true,
+              "polygonTooltipPattern" : "<b>${entityName}</b><br/>Battery: ${battery_percentage:0}%<br/>Flow: ${session_flow_0:2} L/min<br/>Temp: ${temperature:1}°C",
+              "usePolygonColorFunction" : true,
+              "polygonColorFunction" : "var flowRate = data['session_flow_0'];\nvar battery = data['battery_percentage'];\nvar lastUpdateTime = data['session_flow_0'].ts;\nvar now = Date.now();\nvar hoursSinceUpdate = (now - lastUpdateTime) / (1000 * 60 * 60);\n\nif (hoursSinceUpdate > 2) {\n    return '#808080'; // Gray - offline\n} else if (battery < 20) {\n    return '#FF0000'; // Red - low battery\n} else if (flowRate > 0) {\n    return '#00FF00'; // Green - irrigating\n} else if (battery < 30) {\n    return '#FFA500'; // Orange - warning\n} else {\n    return '#2196F3'; // Blue - idle/normal\n}",
+              "showLabel" : true,
+              "label" : "${entityName}",
+              "useLabelFunction" : false,
+              "showTooltipAction" : "click",
+              "autocloseTooltip" : false,
+              "tooltipAction" : {
+                "type" : "doNothing"
+              },
+              "markerClick" : {
+                "type" : "doNothing"
+              },
+              "polygonClick" : {
+                "type" : "customAction",
+                "customAction" : {
+                  "customFunction" : "openDashboard"
+                }
+              }
+            },
+            "title" : "Irrigation Fields Map",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "widgetStyle" : { },
+            "actions" : {
+              "actionCellButton" : {
+                "id" : "openFieldDetails",
+                "name" : "Open Field Details",
+                "icon" : "dashboard",
+                "type" : "openDashboard",
+                "targetDashboardId" : null,
+                "targetDashboardStateId" : "default",
+                "setEntityIdInState" : true,
+                "stateEntityParamName" : "targetEntityId"
+              }
+            }
+          }
+        },
+        "b2c3d4e5-f6g7-8901-bcde-f12345678901" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 12,
+          "sizeY" : 8,
+          "row" : 10,
+          "col" : 0,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "Irrigation Fields",
+              "entityAliasId" : "21fe6e26-ed4e-dd90-aa9e-58bdf51a8fa3",
+              "dataKeys" : [ {
+                "name" : "entityName",
+                "type" : "entityField",
+                "label" : "Field Name",
+                "settings" : {
+                  "columnWidth" : "150px"
+                }
+              }, {
+                "name" : "battery_percentage",
+                "type" : "timeseries",
+                "label" : "Battery %",
+                "color" : "#FFC107",
+                "settings" : {
+                  "columnWidth" : "100px",
+                  "useCellStyleFunction" : true,
+                  "cellStyleFunction" : "if (value < 20) {\n  return {color: '#fff', backgroundColor: '#f44336'};\n} else if (value < 30) {\n  return {color: '#000', backgroundColor: '#ff9800'};\n} else {\n  return {color: '#000', backgroundColor: '#4caf50'};\n}"
+                },
+                "decimals" : 0,
+                "units" : "%"
+              }, {
+                "name" : "charging_status",
+                "type" : "timeseries",
+                "label" : "Charging",
+                "settings" : {
+                  "columnWidth" : "80px",
+                  "useCellContentFunction" : true,
+                  "cellContentFunction" : "if (value > 0) return '🔌'; else return '🔋';"
+                }
+              }, {
+                "name" : "temperature",
+                "type" : "timeseries",
+                "label" : "Temp",
+                "color" : "#FF5722",
+                "settings" : {
+                  "columnWidth" : "80px"
+                },
+                "decimals" : 1,
+                "units" : "°C"
+              }, {
+                "name" : "humidity",
+                "type" : "timeseries",
+                "label" : "Humidity",
+                "color" : "#2196F3",
+                "settings" : {
+                  "columnWidth" : "80px"
+                },
+                "decimals" : 1,
+                "units" : "%"
+              }, {
+                "name" : "session_flow_0",
+                "type" : "timeseries",
+                "label" : "Flow L1",
+                "color" : "#4CAF50",
+                "settings" : {
+                  "columnWidth" : "90px",
+                  "useCellStyleFunction" : true,
+                  "cellStyleFunction" : "if (value > 0) {\n  return {color: '#fff', backgroundColor: '#4caf50', fontWeight: 'bold'};\n} else {\n  return {};\n}"
+                },
+                "decimals" : 2,
+                "units" : "L/min"
+              }, {
+                "name" : "session_flow_1",
+                "type" : "timeseries",
+                "label" : "Flow L2",
+                "color" : "#4CAF50",
+                "settings" : {
+                  "columnWidth" : "90px",
+                  "useCellStyleFunction" : true,
+                  "cellStyleFunction" : "if (value > 0) {\n  return {color: '#fff', backgroundColor: '#4caf50', fontWeight: 'bold'};\n} else {\n  return {};\n}"
+                },
+                "decimals" : 2,
+                "units" : "L/min"
+              }, {
+                "name" : "pulse_counter_0",
+                "type" : "timeseries",
+                "label" : "Total L1",
+                "color" : "#9C27B0",
+                "settings" : {
+                  "columnWidth" : "100px"
+                },
+                "decimals" : 0,
+                "units" : "L"
+              }, {
+                "name" : "pulse_counter_1",
+                "type" : "timeseries",
+                "label" : "Total L2",
+                "color" : "#9C27B0",
+                "settings" : {
+                  "columnWidth" : "100px"
+                },
+                "decimals" : 0,
+                "units" : "L"
+              }, {
+                "name" : "lastActivityTime",
+                "type" : "entityField",
+                "label" : "Last Update",
+                "settings" : {
+                  "columnWidth" : "150px"
+                }
+              } ]
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1766964798487,
+                  "endTimeMs" : 1767051198487
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : true,
+              "displayEntityName" : true,
+              "displayEntityLabel" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "useRowStyleFunction" : false,
+              "displayRowActions" : true,
+              "rowActions" : [ {
+                "id" : "openDetails",
+                "name" : "View Details",
+                "icon" : "visibility",
+                "displayName" : "Details",
+                "type" : "openDashboard",
+                "useShowWidgetActionFunction" : false,
+                "showWidgetActionFunction" : null,
+                "targetDashboardId" : null,
+                "targetDashboardStateId" : "default",
+                "setEntityIdInState" : true,
+                "stateEntityParamName" : "targetEntityId"
+              } ]
+            },
+            "title" : "All Irrigation Fields",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "widgetStyle" : { }
+          }
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Irrigation Overview",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "a1b2c3d4-e5f6-7890-abcd-ef1234567890" : {
+                  "sizeX" : 12,
+                  "sizeY" : 10,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "b2c3d4e5-f6g7-8901-bcde-f12345678901" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "row" : 10,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%",
+                "outerMargin" : true,
+                "layoutType" : "default"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "21fe6e26-ed4e-dd90-aa9e-58bdf51a8fa3" : {
+          "id" : "21fe6e26-ed4e-dd90-aa9e-58bdf51a8fa3",
+          "alias" : "Irrigation Fields",
+          "filter" : {
+            "type" : "assetSearchQuery",
+            "resolveMultiple" : false,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : {
+              "entityType" : "ASSET",
+              "id" : "19a1eab0-e50e-11f0-8920-f98bab6d1641"
+            },
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : null,
+            "assetTypes" : [ "default" ]
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "232a4bd0-e50f-11f0-8920-f98bab6d1641"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Irrigation Management - Overview",
+    "title" : "Irrigation Management - Overview"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
