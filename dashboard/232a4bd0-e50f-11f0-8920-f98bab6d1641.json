@@ -8,8 +8,8 @@
         "a1b2c3d4-e5f6-7890-abcd-ef1234567890" : {
           "typeFullFqn" : "system.maps.openstreet_map",
           "type" : "latest",
-          "sizeX" : 12,
-          "sizeY" : 10,
+          "sizeX" : 4,
+          "sizeY" : 4,
           "row" : 0,
           "col" : 0,
           "config" : {
@@ -327,8 +327,8 @@
           },
           "id" : "4398920d-2e30-a442-5aae-5ffe1819a845"
         },
-        "0a8b7ba2-7a46-afa2-c06f-f63592316d5c" : {
-          "typeFullFqn" : "system.maps_v2.google_maps",
+        "4ec21e65-463d-75c1-681a-defa499e7bc5" : {
+          "typeFullFqn" : "system.maps_v2.openstreetmap",
           "type" : "latest",
           "sizeX" : 8.5,
           "sizeY" : 6,
@@ -337,7 +337,7 @@
               "type" : "device",
               "name" : "",
               "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "entityAliasId" : null,
+              "entityAliasId" : "21fe6e26-ed4e-dd90-aa9e-58bdf51a8fa3",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "polygon",
@@ -345,7 +345,7 @@
                 "label" : "polygon",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.705757507014351
+                "_hash" : 0.43527834336930493
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -368,8 +368,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1766965078038,
-                  "endTimeMs" : 1767051478038
+                  "startTimeMs" : 1766965360005,
+                  "endTimeMs" : 1767051760005
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -387,9 +387,10 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "8px",
             "settings" : {
-              "provider" : "google-map",
-              "gmApiKey" : "AIzaSyDoEx2kaGz3PxwbI9T7ccTSg5xjdw8Nw8Q",
-              "gmDefaultMapType" : "roadmap",
+              "provider" : "openstreet-map",
+              "mapProvider" : "OpenStreetMap.Mapnik",
+              "useCustomProvider" : false,
+              "customProviderTileUrl" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
               "latKeyName" : "latitude",
               "lngKeyName" : "longitude",
               "xPosKeyName" : "xPos",
@@ -415,7 +416,7 @@
               "tooltipPattern" : "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Temperature:</b> ${temperature} °C<br/><small>See advanced settings for details</small>",
               "tooltipOffsetX" : 0,
               "tooltipOffsetY" : -1,
-              "color" : "#fe7568",
+              "color" : "#fe7569",
               "useColorFunction" : true,
               "colorFunction" : "var type = dsData[dsIndex]['Type'];\nif (type == 'colorpin') {\n\tvar temperature = dsData[dsIndex]['temperature'];\n\tif (typeof temperature !== undefined) {\n\t    var percent = (temperature + 60)/120 * 100;\n\t    return tinycolor.mix('blue', 'red', percent).toHexString();\n\t}\n\treturn 'blue';\n}\n",
               "useMarkerImageFunction" : true,
@@ -468,7 +469,7 @@
               "removeOutsideVisibleBounds" : true,
               "useIconCreateFunction" : false
             },
-            "title" : "Google Map",
+            "title" : "Irrigation Fields Map",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -478,28 +479,17 @@
             "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
-            "actions" : {
-              "polygonClick" : [ {
-                "name" : "click para ver mais",
-                "icon" : "more_horiz",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
-                "targetDashboardStateId" : "deviceDetails",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "23d841c0-c1b2-11f0-93ad-355a87ef80c4",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "8221411a-4806-37e8-f94f-e55d9f5200bb"
-              } ]
-            },
-            "displayTimewindow" : true
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "0a8b7ba2-7a46-afa2-c06f-f63592316d5c"
+          "id" : "4ec21e65-463d-75c1-681a-defa499e7bc5"
         }
       },
       "states" : {
@@ -521,11 +511,11 @@
                   "row" : 10,
                   "col" : 0
                 },
-                "0a8b7ba2-7a46-afa2-c06f-f63592316d5c" : {
-                  "sizeX" : 13,
+                "4ec21e65-463d-75c1-681a-defa499e7bc5" : {
+                  "sizeX" : 8,
                   "sizeY" : 6,
-                  "row" : 0,
-                  "col" : 12
+                  "row" : 18,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
