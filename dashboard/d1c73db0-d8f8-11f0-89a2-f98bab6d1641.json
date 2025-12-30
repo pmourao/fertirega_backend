@@ -32,6 +32,20 @@
           "sizeY" : 6,
           "config" : {
             "datasources" : [ {
+              "type" : "device",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "dataKeys" : [ {
+                "name" : "location",
+                "type" : "attribute",
+                "label" : "location",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.25490948915400646
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
               "type" : "entity",
               "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
               "dataKeys" : [ {
@@ -40,35 +54,13 @@
                 "label" : "perimeter",
                 "color" : "#4caf50",
                 "settings" : { },
-                "_hash" : 0.6799332007428774
-              }, {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.4941236452279475
-              }, {
-                "name" : "cropType",
-                "type" : "attribute",
-                "label" : "cropType",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.9238908493765298
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            }, {
-              "type" : "device",
-              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "dataKeys" : [ {
-                "name" : "perimeter",
-                "type" : "attribute",
-                "label" : "perimeter 2",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.7089763558428969
+                "_hash" : 0.6740523439887072,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
