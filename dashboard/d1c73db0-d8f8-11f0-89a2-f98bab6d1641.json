@@ -1093,8 +1093,9 @@
           "sizeY" : 6,
           "config" : {
             "datasources" : [ {
-              "type" : "entity",
+              "type" : "device",
               "name" : null,
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
               "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
               "filterId" : null,
               "dataKeys" : [ {
@@ -1111,19 +1112,6 @@
                 "color" : "#ffc107",
                 "settings" : { },
                 "_hash" : 0.7803202333041441
-              }, {
-                "name" : "type",
-                "type" : "entityField",
-                "label" : "type",
-                "color" : "#9c27b0",
-                "settings" : { },
-                "_hash" : 0.03959817681570765,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
