@@ -59,6 +59,20 @@
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
+            }, {
+              "type" : "device",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
+              "dataKeys" : [ {
+                "name" : "perimeter",
+                "type" : "attribute",
+                "label" : "perimeter 2",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.7089763558428969
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "timewindow" : {
               "displayValue" : "",
