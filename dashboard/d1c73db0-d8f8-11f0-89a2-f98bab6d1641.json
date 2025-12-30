@@ -53,21 +53,15 @@
                 "statusList" : [ "ACTIVE" ]
               }
             }, {
-              "type" : "entity",
-              "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
+              "type" : "device",
+              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
               "dataKeys" : [ {
                 "name" : "perimeter",
                 "type" : "attribute",
                 "label" : "perimeter",
-                "color" : "#A14CAF",
+                "color" : "#f44336",
                 "settings" : { },
-                "_hash" : 0.6740523439887072,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
+                "_hash" : 0.3758939725843281
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
