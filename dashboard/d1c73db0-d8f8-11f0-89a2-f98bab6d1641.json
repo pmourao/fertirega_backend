@@ -32,66 +32,29 @@
           "sizeY" : 6,
           "config" : {
             "datasources" : [ {
-              "type" : "device",
-              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "dataKeys" : [ {
-                "name" : "polygon",
-                "type" : "attribute",
-                "label" : "polygon",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.8936063765014108
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            }, {
               "type" : "entity",
-              "name" : null,
               "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
-              "filterId" : null,
               "dataKeys" : [ {
+                "name" : "perimeter",
+                "type" : "attribute",
+                "label" : "perimeter",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6799332007428774
+              }, {
                 "name" : "name",
                 "type" : "entityField",
                 "label" : "Name",
                 "color" : "#f44336",
                 "settings" : { },
-                "_hash" : 0.848379539472371
-              }, {
-                "name" : "perimeter",
-                "type" : "attribute",
-                "label" : "perimeter",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.7803202333041441
+                "_hash" : 0.4941236452279475
               }, {
                 "name" : "cropType",
                 "type" : "attribute",
                 "label" : "cropType",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.13560061274453417
-              }, {
-                "name" : "avgMoisture",
-                "type" : "timeseries",
-                "label" : "avgMoisture",
                 "color" : "#ffc107",
                 "settings" : { },
-                "_hash" : 0.011152801250584377
-              }, {
-                "name" : "minMoistureThreshold",
-                "type" : "attribute",
-                "label" : "minMoistureThreshold",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.4441224029270672
-              }, {
-                "name" : "maxMoistureThreshold",
-                "type" : "attribute",
-                "label" : "maxMoistureThreshold",
-                "color" : "#3f51b5",
-                "settings" : { },
-                "_hash" : 0.024053653116780316
+                "_hash" : 0.9238908493765298
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
