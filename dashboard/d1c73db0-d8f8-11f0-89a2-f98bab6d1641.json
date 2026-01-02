@@ -4686,13 +4686,10 @@
           "id" : "39927380-423a-872a-0843-de34f99264ad",
           "alias" : "Current field",
           "filter" : {
-            "type" : "stateEntity",
-            "resolveMultiple" : false,
-            "stateEntityParamName" : "Fields",
-            "defaultStateEntity" : {
-              "entityType" : "ASSET",
-              "id" : "6e21f460-e81d-11f0-8920-f98bab6d1641"
-            }
+            "type" : "entityList",
+            "resolveMultiple" : true,
+            "entityType" : "ASSET",
+            "entityList" : [ "d8fde270-d900-11f0-89a2-f98bab6d1641", "6e21f460-e81d-11f0-8920-f98bab6d1641" ]
           }
         },
         "aa55618a-278a-0776-832d-fa1fe5769a2a" : {
