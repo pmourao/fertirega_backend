@@ -4706,10 +4706,10 @@
                   "col" : 14
                 },
                 "diagnostic-widget-12345" : {
-                  "sizeX" : 24,
-                  "sizeY" : 2,
-                  "row" : 0,
-                  "col" : 0
+                  "sizeX" : 27,
+                  "sizeY" : 8,
+                  "row" : 30,
+                  "col" : 20
                 }
               },
               "gridSettings" : {
