@@ -486,7 +486,7 @@
                 "type" : "openDashboardState",
                 "targetDashboardStateId" : "field",
                 "setEntityId" : true,
-                "stateEntityParamName" : null,
+                "stateEntityParamName" : "field",
                 "openRightLayout" : false,
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
@@ -4688,7 +4688,7 @@
           "filter" : {
             "type" : "stateEntity",
             "resolveMultiple" : false,
-            "stateEntityParamName" : "",
+            "stateEntityParamName" : "field",
             "defaultStateEntity" : null
           }
         },
