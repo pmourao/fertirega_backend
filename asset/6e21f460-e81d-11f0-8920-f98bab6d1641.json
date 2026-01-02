@@ -1,14 +1,16 @@
 {
   "entityType" : "ASSET",
   "entity" : {
-    "additionalInfo" : null,
+    "additionalInfo" : {
+      "description" : ""
+    },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
-      "id" : "6e213110-e81d-11f0-8920-f98bab6d1641"
+      "id" : "c1a1d000-d900-11f0-89a2-f98bab6d1641"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "b51039e0-bd9d-11f0-9f62-dbf745488a54"
     },
     "externalId" : null,
     "id" : {
@@ -17,10 +19,55 @@
     },
     "label" : null,
     "name" : "Campo Serrado",
-    "type" : "irrigation_perimeter"
+    "type" : "ASSET_PROFILE"
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e21f460-e81d-11f0-8920-f98bab6d1641"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cecded50-c0ae-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 367
+  } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ]
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 2.5,
+      "jsonValue" : null,
+      "key" : "area_hectares",
+      "lastUpdateTs" : 1767387354825,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "crop_type",
+      "lastUpdateTs" : 1767387354825,
+      "longValue" : null,
+      "strValue" : "Milho"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "polygon_coordinates",
+      "lastUpdateTs" : 1767387354825,
+      "longValue" : null,
+      "strValue" : "[\n            [\n              -8.687075994070938,\n              39.166678829601636\n            ],\n            [\n              -8.686119599031372,\n              39.16593732121561\n            ],\n            [\n              -8.676954146571063,\n              39.17285776214172\n            ],\n            [\n              -8.675360154839268,\n              39.17471133604104\n            ],\n            [\n              -8.677033846157627,\n              39.17502026027361\n            ],\n            [\n              -8.677671442850993,\n              39.17359919756484\n            ],\n            [\n              -8.680301529208833,\n              39.17131307990161\n            ],\n            [\n              -8.687075994070938,\n              39.166678829601636\n            ]\n          ]"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "soil_type",
+      "lastUpdateTs" : 1767387354825,
+      "longValue" : null,
+      "strValue" : "clay"
+    } ]
   }
 }
