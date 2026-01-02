@@ -4735,7 +4735,7 @@
           "filter" : {
             "type" : "assetType",
             "resolveMultiple" : true,
-            "assetTypes" : [ "SI Field", "ASSET_PROFILE" ],
+            "assetTypes" : [ "SI Field", "ASSET_PROFILE", "irrigation_perimeter" ],
             "assetNameFilter" : ""
           }
         },
