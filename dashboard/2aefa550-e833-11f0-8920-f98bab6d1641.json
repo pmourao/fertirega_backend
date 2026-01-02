@@ -3612,10 +3612,10 @@
             "useDashboardTimewindow" : false,
             "showLegend" : false,
             "datasources" : [ {
-              "type" : "device",
+              "type" : "entity",
               "name" : null,
-              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "entityAliasId" : null,
+              "deviceId" : null,
+              "entityAliasId" : "da991fb0-37e7-66e5-ca4b-6c4b0e517333",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "deviceName",
