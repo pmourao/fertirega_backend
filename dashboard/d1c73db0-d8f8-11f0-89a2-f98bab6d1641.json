@@ -4331,91 +4331,6 @@
             }
           }
         },
-        "field" : {
-          "name" : "${entityName}",
-          "root" : false,
-          "layouts" : {
-            "main" : {
-              "widgets" : {
-                "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 13,
-                  "sizeY" : 4,
-                  "row" : 27,
-                  "col" : 0,
-                  "mobileOrder" : 7,
-                  "mobileHeight" : 4
-                },
-                "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
-                  "sizeX" : 32,
-                  "sizeY" : 15,
-                  "row" : 12,
-                  "col" : 0,
-                  "mobileOrder" : 8
-                },
-                "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
-                  "sizeX" : 14,
-                  "sizeY" : 4,
-                  "row" : 2,
-                  "col" : 0,
-                  "mobileOrder" : 3
-                },
-                "e18122c8-7973-5206-792a-cfa7f924a7b0" : {
-                  "sizeX" : 16,
-                  "sizeY" : 15,
-                  "row" : 12,
-                  "col" : 32,
-                  "mobileOrder" : 6
-                },
-                "aaccdb0d-72ff-9f2c-e4ae-55077480a3e6" : {
-                  "sizeX" : 14,
-                  "sizeY" : 2,
-                  "row" : 0,
-                  "col" : 0,
-                  "mobileOrder" : 0
-                },
-                "7dadc15d-b85b-8ef0-5de1-6c23d0acea73" : {
-                  "sizeX" : 7,
-                  "sizeY" : 4,
-                  "mobileOrder" : 4,
-                  "mobileHeight" : null,
-                  "row" : 27,
-                  "col" : 13
-                },
-                "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
-                  "sizeX" : 16,
-                  "sizeY" : 12,
-                  "row" : 0,
-                  "col" : 32
-                },
-                "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
-                  "sizeX" : 14,
-                  "sizeY" : 6,
-                  "row" : 6,
-                  "col" : 0
-                },
-                "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
-                  "sizeX" : 18,
-                  "sizeY" : 12,
-                  "mobileHeight" : null,
-                  "row" : 0,
-                  "col" : 14
-                }
-              },
-              "gridSettings" : {
-                "backgroundColor" : "#f9fafe",
-                "columns" : 48,
-                "margin" : 10,
-                "backgroundSizeMode" : "100%",
-                "autoFillHeight" : true,
-                "backgroundImageUrl" : null,
-                "mobileAutoFillHeight" : false,
-                "mobileRowHeight" : 70,
-                "outerMargin" : true,
-                "layoutType" : "default"
-              }
-            }
-          }
-        },
         "setup_field_polygon" : {
           "name" : "Setup field polygon",
           "root" : false,
@@ -4663,6 +4578,91 @@
                 "autoFillHeight" : true,
                 "backgroundImageUrl" : null,
                 "mobileAutoFillHeight" : true,
+                "mobileRowHeight" : 70,
+                "outerMargin" : true,
+                "layoutType" : "default"
+              }
+            }
+          }
+        },
+        "${entityName}" : {
+          "name" : "${entityName}",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
+                  "sizeX" : 13,
+                  "sizeY" : 4,
+                  "row" : 27,
+                  "col" : 0,
+                  "mobileOrder" : 7,
+                  "mobileHeight" : 4
+                },
+                "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
+                  "sizeX" : 32,
+                  "sizeY" : 15,
+                  "row" : 12,
+                  "col" : 0,
+                  "mobileOrder" : 8
+                },
+                "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
+                  "sizeX" : 14,
+                  "sizeY" : 4,
+                  "row" : 2,
+                  "col" : 0,
+                  "mobileOrder" : 3
+                },
+                "e18122c8-7973-5206-792a-cfa7f924a7b0" : {
+                  "sizeX" : 16,
+                  "sizeY" : 15,
+                  "row" : 12,
+                  "col" : 32,
+                  "mobileOrder" : 6
+                },
+                "aaccdb0d-72ff-9f2c-e4ae-55077480a3e6" : {
+                  "sizeX" : 14,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0,
+                  "mobileOrder" : 0
+                },
+                "7dadc15d-b85b-8ef0-5de1-6c23d0acea73" : {
+                  "sizeX" : 7,
+                  "sizeY" : 4,
+                  "mobileOrder" : 4,
+                  "mobileHeight" : null,
+                  "row" : 27,
+                  "col" : 13
+                },
+                "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
+                  "sizeX" : 16,
+                  "sizeY" : 12,
+                  "row" : 0,
+                  "col" : 32
+                },
+                "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
+                  "sizeX" : 14,
+                  "sizeY" : 6,
+                  "row" : 6,
+                  "col" : 0
+                },
+                "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
+                  "sizeX" : 18,
+                  "sizeY" : 12,
+                  "mobileHeight" : null,
+                  "row" : 0,
+                  "col" : 14
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#f9fafe",
+                "columns" : 48,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : true,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
                 "mobileRowHeight" : 70,
                 "outerMargin" : true,
                 "layoutType" : "default"
