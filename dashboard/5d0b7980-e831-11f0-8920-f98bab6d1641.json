@@ -1076,19 +1076,12 @@
               "type" : "entity",
               "entityAliasId" : "39927380-423a-872a-0843-de34f99264ad",
               "dataKeys" : [ {
-                "name" : "perimeter",
+                "name" : "polygon_coordinates",
                 "type" : "attribute",
-                "label" : "perimeter 2",
-                "color" : "#e91e63",
-                "settings" : { },
-                "_hash" : 0.3077967753809576
-              }, {
-                "name" : "cropType",
-                "type" : "attribute",
-                "label" : "cropType",
+                "label" : "polygon_coordinates",
                 "color" : "#4caf50",
                 "settings" : { },
-                "_hash" : 0.5684510263766591
+                "_hash" : 0.1310458913008471
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
