@@ -4689,7 +4689,7 @@
             "type" : "entityList",
             "resolveMultiple" : true,
             "entityType" : "ASSET",
-            "entityList" : [ "d8fde270-d900-11f0-89a2-f98bab6d1641", "6e21f460-e81d-11f0-8920-f98bab6d1641" ]
+            "entityList" : [ "d8fde270-d900-11f0-89a2-f98bab6d1641" ]
           }
         },
         "aa55618a-278a-0776-832d-fa1fe5769a2a" : {
