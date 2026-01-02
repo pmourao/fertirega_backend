@@ -4792,16 +4792,6 @@
             "assetNameFilter" : ""
           }
         },
-        "a6697071-f290-b853-007d-9e8a9536e896" : {
-          "id" : "a6697071-f290-b853-007d-9e8a9536e896",
-          "alias" : "currentPerimeter",
-          "filter" : {
-            "type" : "stateEntity",
-            "resolveMultiple" : false,
-            "stateEntityParamName" : "entityId",
-            "defaultStateEntity" : null
-          }
-        },
         "05e38798-2c3d-153b-82b5-7b9eae103d26" : {
           "id" : "05e38798-2c3d-153b-82b5-7b9eae103d26",
           "alias" : "perimeterDevices",
