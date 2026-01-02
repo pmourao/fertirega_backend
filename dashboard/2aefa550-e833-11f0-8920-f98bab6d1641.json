@@ -4439,9 +4439,9 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 14,
-                  "sizeY" : 13,
-                  "row" : 6,
+                  "sizeX" : 28,
+                  "sizeY" : 8,
+                  "row" : 12,
                   "col" : 0,
                   "mobileOrder" : 5
                 },
@@ -4631,7 +4631,7 @@
             "type" : "deviceSearchQuery",
             "resolveMultiple" : true,
             "rootStateEntity" : true,
-            "stateEntityParamName" : null,
+            "stateEntityParamName" : "field",
             "defaultStateEntity" : null,
             "rootEntity" : null,
             "direction" : "FROM",
