@@ -4838,7 +4838,7 @@
             "maxLevel" : 1,
             "fetchLastLevelOnly" : false,
             "relationType" : "Contains",
-            "deviceTypes" : [ ]
+            "deviceTypes" : [ "FertiRega LoRa Sensor" ]
           }
         }
       },
