@@ -6,7 +6,7 @@
     },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
-      "id" : "c1a1d000-d900-11f0-89a2-f98bab6d1641"
+      "id" : "6e213110-e81d-11f0-8920-f98bab6d1641"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -19,9 +19,22 @@
     },
     "label" : "Field A",
     "name" : "Field A",
-    "type" : "ASSET_PROFILE"
+    "type" : "irrigation_perimeter"
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d8fde270-d900-11f0-89a2-f98bab6d1641"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 363
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : null,
@@ -36,9 +49,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "cropType",
-      "lastUpdateTs" : 1765725897979,
+      "lastUpdateTs" : 1765747423772,
       "longValue" : null,
-      "strValue" : "Wheat"
+      "strValue" : "Brócolos"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
