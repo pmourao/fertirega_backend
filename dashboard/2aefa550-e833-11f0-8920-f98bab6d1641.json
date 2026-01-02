@@ -3547,200 +3547,6 @@
           "col" : 0,
           "id" : "ab2926f2-5761-a169-3ea7-1f130419c7ac"
         },
-        "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
-          "type" : "latest",
-          "sizeX" : 7.5,
-          "sizeY" : 6.5,
-          "config" : {
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1667907617961,
-                  "endTimeMs" : 1667994017961
-                },
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideFixedInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "aggregation" : {
-                "type" : "NONE",
-                "limit" : 200
-              }
-            },
-            "showTitle" : true,
-            "backgroundColor" : "rgb(255, 255, 255)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "entitiesTitle" : "Controlers",
-              "enableSearch" : true,
-              "enableSelectColumnDisplay" : true,
-              "enableStickyHeader" : true,
-              "enableStickyAction" : true,
-              "reserveSpaceForHiddenAction" : "true",
-              "displayEntityName" : false,
-              "displayEntityLabel" : false,
-              "displayEntityType" : false,
-              "displayPagination" : false,
-              "defaultSortOrder" : "name",
-              "useRowStyleFunction" : false
-            },
-            "title" : "New Entities table",
-            "dropShadow" : false,
-            "enableFullscreen" : false,
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
-            },
-            "useDashboardTimewindow" : false,
-            "showLegend" : false,
-            "datasources" : [ {
-              "type" : "entity",
-              "name" : null,
-              "deviceId" : null,
-              "entityAliasId" : "da991fb0-37e7-66e5-ca4b-6c4b0e517333",
-              "filterId" : null,
-              "dataKeys" : [ {
-                "name" : "deviceName",
-                "type" : "attribute",
-                "label" : "deviceName",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.2436924078848982
-              }, {
-                "name" : "battery_percentage",
-                "type" : "timeseries",
-                "label" : "battery_percentage",
-                "color" : "#4caf50",
-                "settings" : { },
-                "_hash" : 0.7402173249549433
-              }, {
-                "name" : "humidity",
-                "type" : "timeseries",
-                "label" : "humidity",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.9665879553327739
-              }, {
-                "name" : "temperature",
-                "type" : "timeseries",
-                "label" : "temperature",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.9671268153926273
-              }, {
-                "name" : "lastActivityTime",
-                "type" : "attribute",
-                "label" : "lastActivityTime",
-                "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.2506646219633194
-              }, {
-                "name" : "lastConnectTime",
-                "type" : "attribute",
-                "label" : "lastConnectTime",
-                "color" : "#9c27b0",
-                "settings" : { },
-                "_hash" : 0.962894231660291
-              }, {
-                "name" : "lastDisconnectTime",
-                "type" : "attribute",
-                "label" : "lastDisconnectTime",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.283330797282734
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "displayTimewindow" : true,
-            "showTitleIcon" : false,
-            "titleTooltip" : "",
-            "enableDataExport" : false,
-            "widgetStyle" : { },
-            "widgetCss" : ".mat-mdc-header-row {\n    display: none;\n}\n\n.mat-mdc-row, .mat-mdc-cell {\n    border-bottom: none;\n    cursor: pointer;\n}\n\n.mdc-data-table__row:last-child .mdc-data-table__cell {\n    border-bottom: none;\n}\n",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "actions" : {
-              "headerButton" : [ {
-                "name" : "Add moisture sensor",
-                "icon" : "add",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "doNothing",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "e13b9c03-837f-8ae9-cc0c-7a0e9931b1e8"
-              } ],
-              "actionCellButton" : [ {
-                "name" : "Edit moisture sensor",
-                "icon" : "edit",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "doNothing",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "461e0294-e878-6008-1be6-8393c691e5c1"
-              }, {
-                "name" : "Delete moisture sensor",
-                "icon" : "delete",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "doNothing",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "6f239e8e-0b5d-fa30-a836-c22b83afaffa"
-              } ],
-              "rowClick" : [ {
-                "name" : "Controler details",
-                "icon" : "more_horiz",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboardState",
-                "targetDashboardStateId" : "controler_details",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openRightLayout" : false,
-                "popoverPreferredPlacement" : "bottom",
-                "popoverHideOnClickOutside" : true,
-                "popoverHideDashboardToolbar" : true,
-                "popoverWidth" : "300px",
-                "popoverHeight" : "250px",
-                "popoverStyle" : { },
-                "openInSeparateDialog" : false,
-                "openInPopover" : true,
-                "id" : "548ad8b1-2a95-54f5-ffde-9d555e5a5832"
-              } ]
-            },
-            "configMode" : "basic",
-            "titleFont" : null,
-            "titleColor" : null,
-            "titleIcon" : null,
-            "iconColor" : null
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "534c29aa-f483-ee66-1a38-e899e77a8ea5",
-          "typeFullFqn" : "system.cards.entities_table"
-        },
         "d20e83c8-af5c-a342-efac-cbc31bf47660" : {
           "type" : "latest",
           "sizeX" : 5,
@@ -4634,7 +4440,7 @@
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
                   "sizeX" : 14,
-                  "sizeY" : 6,
+                  "sizeY" : 13,
                   "row" : 6,
                   "col" : 0,
                   "mobileOrder" : 5
@@ -4642,7 +4448,7 @@
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 12,
+                  "row" : 22,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
@@ -4672,20 +4478,14 @@
                   "sizeY" : 4,
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
-                  "row" : 27,
-                  "col" : 13
+                  "row" : 28,
+                  "col" : 36
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 16,
                   "sizeY" : 12,
                   "row" : 0,
                   "col" : 32
-                },
-                "534c29aa-f483-ee66-1a38-e899e77a8ea5" : {
-                  "sizeX" : 14,
-                  "sizeY" : 6,
-                  "row" : 6,
-                  "col" : 0
                 },
                 "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
                   "sizeX" : 18,
