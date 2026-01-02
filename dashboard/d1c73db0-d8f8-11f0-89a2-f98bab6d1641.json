@@ -4781,6 +4781,16 @@
             "entityType" : "DEVICE",
             "entityNameFilter" : "eui"
           }
+        },
+        "d3da5499-ec59-bdb1-5204-777e1cc34098" : {
+          "id" : "d3da5499-ec59-bdb1-5204-777e1cc34098",
+          "alias" : "irrigationPerimeters",
+          "filter" : {
+            "type" : "entityList",
+            "resolveMultiple" : true,
+            "entityType" : "ASSET",
+            "entityList" : [ "19a1eab0-e50e-11f0-8920-f98bab6d1641" ]
+          }
         }
       },
       "filters" : { },
