@@ -484,7 +484,7 @@
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboardState",
-                "targetDashboardStateId" : "field",
+                "targetDashboardStateId" : "${entityName}",
                 "setEntityId" : true,
                 "stateEntityParamName" : "field",
                 "openRightLayout" : false,
