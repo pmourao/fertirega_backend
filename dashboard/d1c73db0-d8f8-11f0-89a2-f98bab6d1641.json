@@ -4687,9 +4687,12 @@
           "alias" : "Current field",
           "filter" : {
             "type" : "stateEntity",
-            "resolveMultiple" : true,
-            "stateEntityParamName" : null,
-            "defaultStateEntity" : null
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "Fields",
+            "defaultStateEntity" : {
+              "entityType" : "ASSET",
+              "id" : "6e21f460-e81d-11f0-8920-f98bab6d1641"
+            }
           }
         },
         "aa55618a-278a-0776-832d-fa1fe5769a2a" : {
