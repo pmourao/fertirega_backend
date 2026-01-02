@@ -6,7 +6,7 @@
     },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
-      "id" : "c1a1d000-d900-11f0-89a2-f98bab6d1641"
+      "id" : "6e213110-e81d-11f0-8920-f98bab6d1641"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -19,7 +19,7 @@
     },
     "label" : "Campo Serrado",
     "name" : "Campo Serrado",
-    "type" : "ASSET_PROFILE"
+    "type" : "irrigation_perimeter"
   },
   "relations" : [ {
     "additionalInfo" : null,
