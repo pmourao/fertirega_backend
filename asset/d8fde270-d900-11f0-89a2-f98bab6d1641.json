@@ -6,7 +6,7 @@
     },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
-      "id" : "6e213110-e81d-11f0-8920-f98bab6d1641"
+      "id" : "c1a1d000-d900-11f0-89a2-f98bab6d1641"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -19,7 +19,7 @@
     },
     "label" : "Field A",
     "name" : "Field A",
-    "type" : "irrigation_perimeter"
+    "type" : "ASSET_PROFILE"
   },
   "relations" : [ {
     "additionalInfo" : null,
