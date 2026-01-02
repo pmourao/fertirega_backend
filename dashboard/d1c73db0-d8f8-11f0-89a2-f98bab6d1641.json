@@ -4791,6 +4791,38 @@
             "assetTypes" : [ "irrigation_perimeter" ],
             "assetNameFilter" : ""
           }
+        },
+        "a6697071-f290-b853-007d-9e8a9536e896" : {
+          "id" : "a6697071-f290-b853-007d-9e8a9536e896",
+          "alias" : "currentPerimeter",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "entityId",
+            "defaultStateEntity" : null
+          }
+        },
+        "05e38798-2c3d-153b-82b5-7b9eae103d26" : {
+          "id" : "05e38798-2c3d-153b-82b5-7b9eae103d26",
+          "alias" : "perimeterDevices",
+          "filter" : {
+            "type" : "relationsQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "d8969750-c316-11f0-93ad-355a87ef80c4"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
         }
       },
       "filters" : { },
