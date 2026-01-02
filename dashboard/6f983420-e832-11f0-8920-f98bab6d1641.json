@@ -3550,10 +3550,10 @@
             "useDashboardTimewindow" : false,
             "showLegend" : false,
             "datasources" : [ {
-              "type" : "device",
+              "type" : "entity",
               "name" : null,
               "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "entityAliasId" : null,
+              "entityAliasId" : "05e38798-2c3d-153b-82b5-7b9eae103d26",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "deviceName",
