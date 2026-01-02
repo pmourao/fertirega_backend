@@ -1094,83 +1094,26 @@
           "sizeY" : 6,
           "config" : {
             "datasources" : [ {
-              "type" : "device",
-              "name" : null,
-              "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "entityAliasId" : "cd737d26-3068-aae0-d370-c93f8e7e1a00",
-              "filterId" : null,
+              "type" : "entity",
+              "entityAliasId" : "39927380-423a-872a-0843-de34f99264ad",
               "dataKeys" : [ {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.848379539472371
-              }, {
                 "name" : "perimeter",
                 "type" : "attribute",
-                "label" : "perimeter",
-                "color" : "#ffc107",
+                "label" : "perimeter 2",
+                "color" : "#e91e63",
                 "settings" : { },
-                "_hash" : 0.7803202333041441
+                "_hash" : 0.3077967753809576
+              }, {
+                "name" : "cropType",
+                "type" : "attribute",
+                "label" : "cropType",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.5684510263766591
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
-            }, {
-              "type" : "entity",
-              "name" : null,
-              "entityAliasId" : "aa55618a-278a-0776-832d-fa1fe5769a2a",
-              "filterId" : null,
-              "dataKeys" : [ {
-                "name" : "latitude",
-                "type" : "attribute",
-                "label" : "latitude",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.5728081182215903
-              }, {
-                "name" : "longitude",
-                "type" : "attribute",
-                "label" : "longitude",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.3622534354244682
-              }, {
-                "name" : "type",
-                "type" : "entityField",
-                "label" : "type",
-                "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.7731021658879498,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "moisture",
-                "type" : "timeseries",
-                "label" : "moisture",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.1472154755148487
-              }, {
-                "name" : "minMoistureThreshold",
-                "type" : "attribute",
-                "label" : "minMoistureThreshold",
-                "color" : "#ffeb3b",
-                "settings" : { },
-                "_hash" : 0.6726458750444104
-              }, {
-                "name" : "maxMoistureThreshold",
-                "type" : "attribute",
-                "label" : "maxMoistureThreshold",
-                "color" : "#03a9f4",
-                "settings" : { },
-                "_hash" : 0.41803536024678767
-              } ]
             } ],
             "timewindow" : {
               "displayValue" : "",
