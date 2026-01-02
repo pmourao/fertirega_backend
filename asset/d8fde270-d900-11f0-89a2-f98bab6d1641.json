@@ -6,7 +6,7 @@
     },
     "assetProfileId" : {
       "entityType" : "ASSET_PROFILE",
-      "id" : "c1a1d000-d900-11f0-89a2-f98bab6d1641"
+      "id" : "6e213110-e81d-11f0-8920-f98bab6d1641"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -19,7 +19,7 @@
     },
     "label" : "Field A",
     "name" : "Field A",
-    "type" : "ASSET_PROFILE"
+    "type" : "irrigation_perimeter"
   },
   "relations" : [ {
     "additionalInfo" : null,
@@ -80,8 +80,8 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : "[[39.148526836039146,-8.689830507106596],[39.147269122127064,-8.688490436997677],[39.14837573879753,-8.686392865774122],[39.14954473976498,-8.684434890747072],[39.149669542991546,-8.68442926922984],[39.15070124118773,-8.685438068694943],[39.150821882327804,-8.686038871959262],[39.14998155008977,-8.687459717659657]]",
-      "key" : "perimeter",
-      "lastUpdateTs" : 1765746916533,
+      "key" : "polygon_coordinates",
+      "lastUpdateTs" : 1767395979697,
       "longValue" : null,
       "strValue" : null
     } ]
