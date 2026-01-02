@@ -4687,7 +4687,7 @@
           "alias" : "Current field",
           "filter" : {
             "type" : "stateEntity",
-            "resolveMultiple" : true,
+            "resolveMultiple" : false,
             "stateEntityParamName" : "field",
             "defaultStateEntity" : null
           }
