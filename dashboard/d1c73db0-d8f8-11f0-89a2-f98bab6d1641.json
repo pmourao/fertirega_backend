@@ -4687,7 +4687,7 @@
           "alias" : "Current field",
           "filter" : {
             "type" : "stateEntity",
-            "resolveMultiple" : true,
+            "resolveMultiple" : false,
             "stateEntityParamName" : "field",
             "defaultStateEntity" : null
           }
@@ -4736,16 +4736,6 @@
             "defaultStateEntity" : null
           }
         },
-        "a522240b-84fe-5d77-495c-c274c58fbb32" : {
-          "id" : "a522240b-84fe-5d77-495c-c274c58fbb32",
-          "alias" : "Atoms",
-          "filter" : {
-            "type" : "deviceType",
-            "resolveMultiple" : true,
-            "deviceTypes" : [ "FertiRega LoRa Sensor" ],
-            "deviceNameFilter" : ""
-          }
-        },
         "d6332461-1bf4-f761-892e-b88e3372db4d" : {
           "id" : "d6332461-1bf4-f761-892e-b88e3372db4d",
           "alias" : "Devices",
@@ -4770,26 +4760,6 @@
             "fetchLastLevelOnly" : false,
             "relationType" : "Contains",
             "deviceTypes" : [ "FertiRega LoRa Sensor" ]
-          }
-        },
-        "bd57a24c-aaf3-5566-39b8-d615ff695adc" : {
-          "id" : "bd57a24c-aaf3-5566-39b8-d615ff695adc",
-          "alias" : "EUI-devices",
-          "filter" : {
-            "type" : "entityName",
-            "resolveMultiple" : true,
-            "entityType" : "DEVICE",
-            "entityNameFilter" : "eui"
-          }
-        },
-        "d3da5499-ec59-bdb1-5204-777e1cc34098" : {
-          "id" : "d3da5499-ec59-bdb1-5204-777e1cc34098",
-          "alias" : "irrigationPerimeters",
-          "filter" : {
-            "type" : "assetType",
-            "resolveMultiple" : true,
-            "assetTypes" : [ "irrigation_perimeter" ],
-            "assetNameFilter" : ""
           }
         },
         "05e38798-2c3d-153b-82b5-7b9eae103d26" : {
