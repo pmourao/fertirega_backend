@@ -4660,23 +4660,23 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 14,
+                  "sizeX" : 18,
                   "sizeY" : 6,
-                  "row" : 6,
+                  "row" : 17,
                   "col" : 0,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 12,
+                  "row" : 26,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
                 "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
                   "sizeX" : 14,
                   "sizeY" : 4,
-                  "row" : 2,
+                  "row" : 13,
                   "col" : 0,
                   "mobileOrder" : 3
                 },
@@ -4700,7 +4700,7 @@
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
                   "row" : 27,
-                  "col" : 13
+                  "col" : 39
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 16,
@@ -4718,7 +4718,7 @@
                 "field-stats-widget" : {
                   "sizeX" : 18,
                   "sizeY" : 3,
-                  "row" : 12,
+                  "row" : 23,
                   "col" : 0
                 },
                 "irrigation-status-display" : {
@@ -4729,10 +4729,10 @@
                   "mobileOrder" : 0
                 },
                 "irrigation-buttons-widget" : {
-                  "sizeX" : 10,
-                  "sizeY" : 3,
-                  "row" : 0,
-                  "col" : 14,
+                  "sizeX" : 14,
+                  "sizeY" : 7,
+                  "row" : 3,
+                  "col" : 0,
                   "mobileOrder" : 1
                 }
               },
