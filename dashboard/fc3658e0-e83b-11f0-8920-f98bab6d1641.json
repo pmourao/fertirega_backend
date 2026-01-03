@@ -4295,15 +4295,18 @@
           "config" : {
             "datasources" : [ {
               "type" : "entity",
-              "entityAliasId" : "39927380-423a-872a-0843-de34f99264ad",
+              "entityAliasId" : "264356aa-f5f0-6605-d246-750736edf5c6",
               "dataKeys" : [ {
-                "name" : "irrigationState",
+                "name" : "valve_0_status",
                 "type" : "timeseries",
-                "label" : "Current Status",
-                "color" : "#4caf50",
+                "label" : "valve_0_status",
+                "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.456
-              } ]
+                "_hash" : 0.44305895532896933
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "timewindow" : {
               "displayValue" : "",
@@ -4346,13 +4349,16 @@
             "padding" : "16px",
             "settings" : {
               "useMarkdownTextFunction" : true,
-              "markdownTextFunction" : "var state = data[0] && data[0]['irrigationState'] ? data[0]['irrigationState'] : 'UNKNOWN';\nvar isOn = state === 'ON';\nvar color = isOn ? '#4caf50' : '#9e9e9e';\nvar bgColor = isOn ? 'rgba(76, 175, 80, 0.1)' : 'rgba(158, 158, 158, 0.1)';\nvar icon = isOn ? '💧' : '⭕';\n\nreturn '<div style=\"display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: ' + bgColor + '; border-radius: 12px;\">' +\n    '<span style=\"font-size: 48px;\">' + icon + '</span>' +\n    '<div style=\"text-align: left;\">' +\n        '<div style=\"font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 4px;\">Current Status</div>' +\n        '<div style=\"font-size: 36px; font-weight: 700; color: ' + color + ';\">' + state + '</div>' +\n    '</div>' +\n'</div>';",
-              "applyDefaultMarkdownStyle" : false
+              "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
+              "markdownTextFunction" : "var state = data[0] && data[0]['irrigationState'] ? data[0][\n    'irrigationState'\n] : 'UNKNOWN';\nvar isOn = state === 'ON';\nvar color = isOn ? '#4caf50' : '#9e9e9e';\nvar bgColor = isOn ? 'rgba(76, 175, 80, 0.1)' :\n    'rgba(158, 158, 158, 0.1)';\nvar icon = isOn ? '💧' : '⭕';\n\nreturn '<div style=\"display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: ' +\n    bgColor + '; border-radius: 12px;\">' +\n    '<span style=\"font-size: 48px;\">' + icon + '</span>' +\n    '<div style=\"text-align: left;\">' +\n    '<div style=\"font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 4px;\">Current Status</div>' +\n    '<div style=\"font-size: 36px; font-weight: 700; color: ' +\n    color + ';\">' + state + '</div>' +\n    '</div>' +\n    '</div>';",
+              "applyDefaultMarkdownStyle" : false,
+              "markdownCss" : ""
             },
             "useDashboardTimewindow" : true,
             "dropShadow" : true,
             "showTitleIcon" : true,
-            "titleIcon" : "info"
+            "titleIcon" : "info",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
@@ -4660,7 +4666,7 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 18,
+                  "sizeX" : 14,
                   "sizeY" : 6,
                   "row" : 17,
                   "col" : 0,
@@ -4712,7 +4718,7 @@
                   "sizeX" : 18,
                   "sizeY" : 12,
                   "mobileHeight" : null,
-                  "row" : 0,
+                  "row" : 11,
                   "col" : 14
                 },
                 "field-stats-widget" : {
@@ -4722,16 +4728,16 @@
                   "col" : 0
                 },
                 "irrigation-status-display" : {
-                  "sizeX" : 14,
-                  "sizeY" : 3,
-                  "row" : 0,
-                  "col" : 0,
+                  "sizeX" : 31,
+                  "sizeY" : 6,
+                  "row" : 41,
+                  "col" : 11,
                   "mobileOrder" : 0
                 },
                 "irrigation-buttons-widget" : {
-                  "sizeX" : 14,
-                  "sizeY" : 7,
-                  "row" : 3,
+                  "sizeX" : 31,
+                  "sizeY" : 9,
+                  "row" : 2,
                   "col" : 0,
                   "mobileOrder" : 1
                 }
