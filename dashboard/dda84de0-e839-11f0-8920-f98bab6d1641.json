@@ -4611,8 +4611,8 @@
                   "sizeY" : 4,
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
-                  "row" : 27,
-                  "col" : 13
+                  "row" : 28,
+                  "col" : 39
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 16,
@@ -4628,9 +4628,9 @@
                   "col" : 14
                 },
                 "irrigation-control-widget" : {
-                  "sizeX" : 14,
-                  "sizeY" : 4,
-                  "row" : 0,
+                  "sizeX" : 17,
+                  "sizeY" : 9,
+                  "row" : 27,
                   "col" : 0,
                   "mobileOrder" : 0
                 },
