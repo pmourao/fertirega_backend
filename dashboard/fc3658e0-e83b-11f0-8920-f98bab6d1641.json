@@ -4668,21 +4668,21 @@
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
                   "sizeX" : 14,
                   "sizeY" : 6,
-                  "row" : 17,
+                  "row" : 9,
                   "col" : 0,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 26,
+                  "row" : 18,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
                 "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
                   "sizeX" : 14,
                   "sizeY" : 4,
-                  "row" : 13,
+                  "row" : 5,
                   "col" : 0,
                   "mobileOrder" : 3
                 },
@@ -4718,13 +4718,13 @@
                   "sizeX" : 18,
                   "sizeY" : 12,
                   "mobileHeight" : null,
-                  "row" : 11,
+                  "row" : 0,
                   "col" : 14
                 },
                 "field-stats-widget" : {
                   "sizeX" : 18,
                   "sizeY" : 3,
-                  "row" : 23,
+                  "row" : 15,
                   "col" : 0
                 },
                 "irrigation-status-display" : {
@@ -4735,8 +4735,8 @@
                   "mobileOrder" : 0
                 },
                 "irrigation-buttons-widget" : {
-                  "sizeX" : 31,
-                  "sizeY" : 9,
+                  "sizeX" : 14,
+                  "sizeY" : 3,
                   "row" : 2,
                   "col" : 0,
                   "mobileOrder" : 1
