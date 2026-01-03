@@ -4610,8 +4610,8 @@
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
                   "sizeX" : 14,
                   "sizeY" : 6,
-                  "row" : 6,
-                  "col" : 0,
+                  "row" : 27,
+                  "col" : 20,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
@@ -4660,7 +4660,7 @@
                   "sizeX" : 18,
                   "sizeY" : 12,
                   "mobileHeight" : null,
-                  "row" : 0,
+                  "row" : 34,
                   "col" : 14
                 },
                 "field-stats-widget" : {
@@ -4670,10 +4670,10 @@
                   "col" : 0
                 },
                 "irrigation-control-card-v2" : {
-                  "sizeX" : 14,
-                  "sizeY" : 6,
-                  "row" : 0,
-                  "col" : 0,
+                  "sizeX" : 15,
+                  "sizeY" : 8,
+                  "row" : 1,
+                  "col" : 16,
                   "mobileOrder" : 0
                 }
               },
