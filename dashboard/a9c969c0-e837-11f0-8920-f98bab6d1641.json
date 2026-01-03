@@ -3609,7 +3609,7 @@
               "type" : "entity",
               "name" : "",
               "deviceId" : "d8969750-c316-11f0-93ad-355a87ef80c4",
-              "entityAliasId" : "b1b0b012-4375-7a04-2ced-37868541ca5e",
+              "entityAliasId" : "264356aa-f5f0-6605-d246-750736edf5c6",
               "dataKeys" : [ {
                 "name" : "temperature",
                 "type" : "timeseries",
