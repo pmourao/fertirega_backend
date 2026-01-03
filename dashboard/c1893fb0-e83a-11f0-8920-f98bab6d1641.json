@@ -4610,22 +4610,22 @@
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
                   "sizeX" : 14,
                   "sizeY" : 6,
-                  "row" : 27,
-                  "col" : 20,
+                  "row" : 4,
+                  "col" : 15,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 12,
+                  "row" : 18,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
                 "fd1083dd-fad3-90c3-8eba-8a8fe0f1d93e" : {
                   "sizeX" : 14,
                   "sizeY" : 4,
-                  "row" : 2,
-                  "col" : 0,
+                  "row" : 0,
+                  "col" : 15,
                   "mobileOrder" : 3
                 },
                 "e18122c8-7973-5206-792a-cfa7f924a7b0" : {
@@ -4636,8 +4636,8 @@
                   "mobileOrder" : 6
                 },
                 "aaccdb0d-72ff-9f2c-e4ae-55077480a3e6" : {
-                  "sizeX" : 14,
-                  "sizeY" : 2,
+                  "sizeX" : 15,
+                  "sizeY" : 3,
                   "row" : 0,
                   "col" : 0,
                   "mobileOrder" : 0
@@ -4647,8 +4647,8 @@
                   "sizeY" : 4,
                   "mobileOrder" : 4,
                   "mobileHeight" : null,
-                  "row" : 27,
-                  "col" : 13
+                  "row" : 37,
+                  "col" : 15
                 },
                 "ab2926f2-5761-a169-3ea7-1f130419c7ac" : {
                   "sizeX" : 16,
@@ -4660,20 +4660,20 @@
                   "sizeX" : 18,
                   "sizeY" : 12,
                   "mobileHeight" : null,
-                  "row" : 34,
-                  "col" : 14
+                  "row" : 33,
+                  "col" : 29
                 },
                 "field-stats-widget" : {
-                  "sizeX" : 18,
-                  "sizeY" : 3,
-                  "row" : 12,
+                  "sizeX" : 15,
+                  "sizeY" : 7,
+                  "row" : 11,
                   "col" : 0
                 },
                 "irrigation-control-card-v2" : {
                   "sizeX" : 15,
                   "sizeY" : 8,
-                  "row" : 1,
-                  "col" : 16,
+                  "row" : 3,
+                  "col" : 0,
                   "mobileOrder" : 0
                 }
               },
