@@ -2137,23 +2137,6 @@
               }, {
                 "name" : "irrigationTask",
                 "type" : "timeseries",
-                "label" : "Volume",
-                "color" : "#ffc107",
-                "settings" : {
-                  "useCellStyleFunction" : false,
-                  "useCellContentFunction" : true,
-                  "cellContentFunction" : "var data;\nif (value) {\n    try {\n        data = JSON.parse(value);\n    } catch (e){}\n}\nif (data) {\n    var consumption = data.consumption;\n    if (typeof consumption === 'number') {\n        return consumption.toFixed(0) + ' l';\n    } else {\n        return 'N/A'\n    }\n} else {\n    return 'N/A';\n}\n"
-                },
-                "_hash" : 0.9378980877980216,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              }, {
-                "name" : "irrigationTask",
-                "type" : "timeseries",
                 "label" : "Progress",
                 "color" : "#607d8b",
                 "settings" : {
@@ -2170,6 +2153,9 @@
                 "usePostProcessing" : null,
                 "postFuncBody" : null
               } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
               "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
