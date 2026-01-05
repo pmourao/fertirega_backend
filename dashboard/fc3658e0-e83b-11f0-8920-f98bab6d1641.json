@@ -3789,8 +3789,8 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "interval" : 60000,
-                "timewindowMs" : 18000000,
+                "interval" : 1800000,
+                "timewindowMs" : 604800000,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -4666,16 +4666,16 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 14,
+                  "sizeX" : 32,
                   "sizeY" : 6,
-                  "row" : 9,
+                  "row" : 12,
                   "col" : 0,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 18,
+                  "row" : 21,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
@@ -4724,7 +4724,7 @@
                 "field-stats-widget" : {
                   "sizeX" : 18,
                   "sizeY" : 3,
-                  "row" : 15,
+                  "row" : 18,
                   "col" : 0
                 },
                 "irrigation-status-display" : {
@@ -4897,14 +4897,32 @@
         "selectedTab" : 0,
         "realtime" : {
           "realtimeType" : 0,
-          "timewindowMs" : 604800000,
+          "interval" : 1800000,
+          "timewindowMs" : 7200000,
           "quickInterval" : "CURRENT_DAY",
-          "interval" : 1800000
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1767568285417,
+            "endTimeMs" : 1767654685417
+          },
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideFixedInterval" : false,
+          "hideQuickInterval" : false
         },
         "aggregation" : {
           "type" : "AVG",
           "limit" : 25000
-        }
+        },
+        "timezone" : null
       },
       "settings" : {
         "stateControllerId" : "entity",
