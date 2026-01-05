@@ -4281,7 +4281,17 @@
                 "funcBody" : null,
                 "usePostProcessing" : null,
                 "postFuncBody" : null
-              } ]
+              }, {
+                "name" : "activeSector",
+                "type" : "entityField",
+                "label" : "activeSector",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.08351546601658866
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "displayTimewindow" : true,
             "actions" : {
