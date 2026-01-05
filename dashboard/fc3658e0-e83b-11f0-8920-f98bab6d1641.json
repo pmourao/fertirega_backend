@@ -4353,6 +4353,188 @@
           "col" : 0,
           "id" : "dc72c12f-de98-12c3-4ff9-8d7103450825",
           "typeFullFqn" : "system.cards.entities_table"
+        },
+        "bd021397-2cea-5233-e5a8-bb9a5865d718" : {
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1667907617961,
+                  "endTimeMs" : 1667994017961
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "entitiesTitle" : "SECTORES",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "entityNameColumnTitle" : "",
+              "displayEntityLabel" : false,
+              "entityLabelColumnTitle" : "",
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "name",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Connected Devices",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "264356aa-f5f0-6605-d246-750736edf5c6",
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Device Name",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "30%",
+                  "useCellStyleFunction" : false,
+                  "useCellContentFunction" : false,
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled"
+                },
+                "_hash" : 0.123
+              }, {
+                "name" : "type",
+                "type" : "entityField",
+                "label" : "Type",
+                "color" : "#4caf50",
+                "settings" : {
+                  "columnWidth" : "25%",
+                  "useCellStyleFunction" : true,
+                  "cellStyleFunction" : "return { fontWeight: 600 };",
+                  "useCellContentFunction" : true,
+                  "cellContentFunction" : "var typeMap = {\n    'SI Soil Moisture Sensor': '💧 Moisture',\n    'FertiRega LoRa Sensor': '📡 Controller'\n};\nvar displayType = typeMap[value] || value;\nreturn '<span style=\"background: rgba(111, 116, 242, 0.08); border-radius: 16px; padding: 4px 8px; color: #5553AF;\">' + displayType + '</span>';",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled"
+                },
+                "_hash" : 0.456
+              }, {
+                "name" : "label",
+                "type" : "entityField",
+                "label" : "Label",
+                "color" : "#f44336",
+                "settings" : {
+                  "columnWidth" : "20%",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled"
+                },
+                "_hash" : 0.789
+              }, {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "Status",
+                "color" : "#ffc107",
+                "settings" : {
+                  "columnWidth" : "15%",
+                  "useCellContentFunction" : true,
+                  "cellContentFunction" : "var isActive = value === true || value === 'true';\nvar color = isActive ? '#198038' : '#D12730';\nvar text = isActive ? 'Active' : 'Offline';\nreturn '<div><span style=\"width: 8px; height: 8px; border-radius: 4px; background: ' + color + '; display: inline-block; vertical-align: middle;\"></span><span style=\"padding-left: 8px; font-weight: 500;\">' + text + '</span></div>';",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled"
+                },
+                "_hash" : 0.321
+              }, {
+                "name" : "lastActivityTime",
+                "type" : "attribute",
+                "label" : "Last Activity",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "10%",
+                  "useCellContentFunction" : true,
+                  "cellContentFunction" : "if (!value) return 'Never';\nvar elapsed = Date.now() - value;\nvar minutes = Math.floor(elapsed / 60000);\nvar hours = Math.floor(minutes / 60);\nvar days = Math.floor(hours / 24);\nif (days > 0) return days + 'd ago';\nif (hours > 0) return hours + 'h ago';\nif (minutes > 0) return minutes + 'm ago';\nreturn 'Just now';",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled"
+                },
+                "_hash" : 0.654
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "widgetCss" : ".mat-mdc-header-row {\n    display: none;\n}\n\n.mat-mdc-row, .mat-mdc-cell {\n    border-bottom: none;\n    cursor: pointer;\n}\n\n.mdc-data-table__row:last-child .mdc-data-table__cell {\n    border-bottom: none;\n}\n",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add Device to Field",
+                "icon" : "add",
+                "type" : "customPretty",
+                "customHtml" : "<form #addDeviceForm=\"ngForm\" [formGroup]=\"addDeviceFormGroup\" (ngSubmit)=\"save()\" class=\"add-device-form\">\n    <mat-toolbar fxLayout=\"row\" color=\"primary\">\n        <h2>Add Device to Field</h2>\n        <span fxFlex></span>\n        <button mat-icon-button (click)=\"cancel()\" type=\"button\">\n            <mat-icon class=\"material-icons\">close</mat-icon>\n        </button>\n    </mat-toolbar>\n    <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\"></mat-progress-bar>\n    <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n    \n    <div mat-dialog-content fxLayout=\"column\">\n        <div class=\"section-title\">Select Device</div>\n        \n        <div fxLayout=\"row\" fxLayout.xs=\"column\">\n            <tb-entity-select\n                fxFlex class=\"mat-block\"\n                formControlName=\"device\"\n                [required]=\"true\">\n            </tb-entity-select>\n        </div>\n        \n        <div class=\"helper-text\">\n            Select a device to link to this field via \"Contains\" relation.\n        </div>\n    </div>\n    \n    <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n        <button mat-button color=\"primary\" type=\"button\" [disabled]=\"(isLoading$ | async)\" (click)=\"cancel()\">\n            Cancel\n        </button>\n        <button mat-button mat-raised-button color=\"primary\" type=\"submit\" \n                [disabled]=\"(isLoading$ | async) || addDeviceForm.invalid || !addDeviceForm.dirty\">\n            Add Device\n        </button>\n    </div>\n</form>",
+                "customCss" : ".add-device-form .section-title {\n    color: rgba(0,0,0,0.87);\n    font-size: 14px;\n    font-weight: 500;\n    margin-top: 8px;\n    margin-bottom: 8px;\n}\n\n.add-device-form .helper-text {\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n    margin-top: 8px;\n    margin-bottom: 16px;\n}\n\n.add-device-form .mat-form-field {\n    width: 100%;\n}\n\n.add-device-form .mat-form-field-infix {\n    width: auto !important;\n}",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\nopenAddDeviceDialog();\n\nfunction openAddDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, AddDeviceDialogController).subscribe();\n}\n\nfunction AddDeviceDialogController(instance) {\n    let vm = instance;\n    \n    vm.addDeviceFormGroup = vm.fb.group({\n        device: [null, [vm.validators.required]]\n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addDeviceFormGroup.markAsPristine();\n        \n        let deviceId = vm.addDeviceFormGroup.get('device').value;\n        let fieldParam = widgetContext.stateController.getStateParams().field;\n        \n        if (!fieldParam) {\n            console.error('No field parameter in state');\n            return;\n        }\n        \n        // Parse and extract the correct field entity ID\n        let fieldEntityId;\n        try {\n            let parsed = fieldParam;\n            if (typeof fieldParam === 'string') {\n                parsed = JSON.parse(fieldParam);\n            }\n            \n            // Check if entityId is nested (from state parameter)\n            if (parsed.entityId) {\n                fieldEntityId = parsed.entityId;\n            } else {\n                fieldEntityId = parsed;\n            }\n            \n            console.log('Extracted field ID:', fieldEntityId);\n        } catch (e) {\n            console.error('Error parsing field ID:', e);\n            return;\n        }\n        \n        // Ensure both IDs have correct format\n        if (!fieldEntityId.entityType || !fieldEntityId.id) {\n            console.error('Invalid field entity ID format:', fieldEntityId);\n            return;\n        }\n        \n        if (!deviceId.entityType || !deviceId.id) {\n            console.error('Invalid device entity ID format:', deviceId);\n            return;\n        }\n        \n        let relation = {\n            from: fieldEntityId,\n            to: deviceId,\n            type: 'Contains',\n            typeGroup: 'COMMON'\n        };\n        \n        console.log('Creating relation:', relation);\n        \n        entityRelationService.saveRelation(relation).subscribe(\n            function(result) {\n                console.log('✅ Relation created successfully!');\n                widgetContext.updateAliases();\n                vm.dialogRef.close(null);\n            },\n            function(error) {\n                console.error('❌ Error creating relation:', error);\n            }\n        );\n    };\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "add-device-action"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Remove from Field",
+                "icon" : "delete",
+                "type" : "customPretty",
+                "customHtml" : "<div class=\"remove-device-dialog\">\n    <h2 mat-dialog-title>Remove Device from Field?</h2>\n    <mat-dialog-content>\n        <p>Are you sure you want to remove <strong>{{entityName}}</strong> from this field?</p>\n        <p class=\"warning-text\">This will delete the \"Contains\" relation between the field and this device.</p>\n    </mat-dialog-content>\n    <mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n        <button mat-button (click)=\"cancel()\">Cancel</button>\n        <button mat-button mat-raised-button color=\"warn\" (click)=\"confirm()\">Remove Device</button>\n    </mat-dialog-actions>\n</div>",
+                "customCss" : ".remove-device-dialog .warning-text {\n    color: #D12730;\n    font-size: 13px;\n    margin-top: 8px;\n}",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\n// Get device ID from additional params (passed by action cell button)\nlet deviceEntityId = additionalParams?.entityId || additionalParams?.entity?.id;\nlet deviceName = additionalParams?.entityName || additionalParams?.entity?.name || 'this device';\n\nopenRemoveDeviceDialog();\n\nfunction openRemoveDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, RemoveDeviceDialogController).subscribe();\n}\n\nfunction RemoveDeviceDialogController(instance) {\n    let vm = instance;\n    \n    vm.entityName = deviceName;\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.confirm = function() {\n        let fieldParam = widgetContext.stateController.getStateParams().field;\n        \n        if (!fieldParam || !deviceEntityId) {\n            console.error('Missing field or device ID');\n            return;\n        }\n        \n        // Parse field ID\n        let fieldEntityId;\n        try {\n            let parsed = fieldParam;\n            if (typeof fieldParam === 'string') {\n                parsed = JSON.parse(fieldParam);\n            }\n            \n            if (parsed.entityId) {\n                fieldEntityId = parsed.entityId;\n            } else {\n                fieldEntityId = parsed;\n            }\n        } catch (e) {\n            console.error('Error parsing field ID:', e);\n            return;\n        }\n        \n        console.log('Deleting relation FROM:', fieldEntityId, 'TO:', deviceEntityId);\n        \n        entityRelationService.deleteRelation(\n            fieldEntityId,\n            'Contains',\n            deviceEntityId,\n            'COMMON'\n        ).subscribe(\n            function(result) {\n                console.log('✅ Device removed successfully!');\n                widgetContext.updateAliases();\n                vm.dialogRef.close(null);\n            },\n            function(error) {\n                console.error('❌ Error removing device:', error);\n            }\n        );\n    };\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "remove-device-action"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "bd021397-2cea-5233-e5a8-bb9a5865d718",
+          "typeFullFqn" : "system.cards.entities_table"
         }
       },
       "states" : {
@@ -4653,16 +4835,16 @@
             "main" : {
               "widgets" : {
                 "8fcd3aed-58d0-0cad-cf63-3a08e1be40a9" : {
-                  "sizeX" : 32,
+                  "sizeX" : 14,
                   "sizeY" : 6,
-                  "row" : 12,
+                  "row" : 9,
                   "col" : 0,
                   "mobileOrder" : 5
                 },
                 "8345be8d-e581-cbf5-3b22-a95bc191063f" : {
                   "sizeX" : 32,
                   "sizeY" : 15,
-                  "row" : 21,
+                  "row" : 18,
                   "col" : 0,
                   "mobileOrder" : 8
                 },
@@ -4703,7 +4885,7 @@
                 },
                 "83c67c0a-e6f6-0a54-460f-7a457384a210" : {
                   "sizeX" : 18,
-                  "sizeY" : 12,
+                  "sizeY" : 9,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 14
@@ -4711,7 +4893,7 @@
                 "field-stats-widget" : {
                   "sizeX" : 18,
                   "sizeY" : 3,
-                  "row" : 18,
+                  "row" : 15,
                   "col" : 0
                 },
                 "irrigation-status-display" : {
@@ -4727,6 +4909,12 @@
                   "row" : 2,
                   "col" : 0,
                   "mobileOrder" : 1
+                },
+                "bd021397-2cea-5233-e5a8-bb9a5865d718" : {
+                  "sizeX" : 14,
+                  "sizeY" : 6,
+                  "row" : 9,
+                  "col" : 14
                 }
               },
               "gridSettings" : {
